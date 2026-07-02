@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>お支払い | まぐまぐストア</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Zen+Maru+Gothic:wght@700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="user">
+
+<header class="site-header">
+  <div class="wrap header-in">
+    <a class="logo" href="index.html"><span class="logo-mark">m!</span> まぐまぐストア</a>
+    <div class="header-actions"><span style="font-size:12px;color:var(--sub)">🔒 このページはSSLで保護されています（デモ）</span></div>
+  </div>
+</header>
+
+<main class="wrap" style="padding-top:26px;padding-bottom:60px;max-width:900px">
+  <div class="steps">
+    <div class="step done"><span class="n">✓</span>日時の選択</div>
+    <div class="step active"><span class="n">2</span>お支払い</div>
+    <div class="step"><span class="n">3</span>予約完了</div>
+  </div>
+
+  <h1 class="page-title">お支払い</h1>
+  <p class="page-desc">クレジットカードでお支払いいただけます。</p>
+
+  <div style="display:flex;gap:26px;align-items:flex-start">
+    <div class="card card-pad" style="flex:1;min-width:0">
+      <h2 style="font-size:16px;margin-bottom:16px">💳 カード情報</h2>
+      <div class="field">
+        <label>カード番号<span class="req">必須</span></label>
+        <input class="in" placeholder="1234 5678 9012 3456" inputmode="numeric">
+      </div>
+      <div style="display:flex;gap:14px">
+        <div class="field" style="flex:1">
+          <label>有効期限<span class="req">必須</span></label>
+          <input class="in" placeholder="MM / YY">
+        </div>
+        <div class="field" style="flex:1">
+          <label>セキュリティコード<span class="req">必須</span></label>
+          <input class="in" placeholder="123">
+        </div>
+      </div>
+      <div class="field">
+        <label>カード名義<span class="req">必須</span></label>
+        <input class="in" placeholder="TARO MAGUMAGU">
+      </div>
+      <div class="note"><b>🔖 検討中の論点（社内メモ）</b> 決済代行会社は未選定（§4-1）。このフォームはデモ用の見た目のみで、実際の決済は行われません。</div>
+      <label style="display:flex;gap:8px;font-size:13px;align-items:flex-start;margin:14px 0">
+        <input type="checkbox" style="margin-top:4px"> <span><a href="terms.html" style="text-decoration:underline">利用規約</a>と<a href="terms.html" style="text-decoration:underline">キャンセル・返金の規定</a>に同意します</span>
+      </label>
+      <button class="btn btn-accent btn-lg btn-block" data-demo-submit="（デモ）決済が完了しました。確認メールを送信します。" data-demo-next="complete.html">¥33,000 を支払って予約を確定する</button>
+    </div>
+
+    <aside style="width:300px;flex-shrink:0">
+      <div class="card card-pad">
+        <p style="font-size:12px;color:var(--sub)">ご注文内容</p>
+        <b style="font-size:14.5px">事業相談・壁打ち 30分対談</b>
+        <p style="font-size:12.5px;color:var(--sub)">堀川 蓮</p>
+        <table style="width:100%;font-size:13px;margin-top:12px">
+          <tr><td style="padding:4px 0">日時</td><td style="text-align:right"><b>7月8日(水) 13:00〜13:30</b></td></tr>
+          <tr><td style="padding:4px 0">形式</td><td style="text-align:right">オンライン</td></tr>
+          <tr><td style="padding:4px 0">商品代金</td><td style="text-align:right">¥30,000</td></tr>
+          <tr><td style="padding:4px 0">消費税</td><td style="text-align:right">¥3,000</td></tr>
+          <tr><td style="padding:8px 0;border-top:1px solid var(--line)"><b>合計</b></td><td style="text-align:right;border-top:1px solid var(--line)"><b style="font-size:18px">¥33,000</b></td></tr>
+        </table>
+      </div>
+      <div class="note note-info" style="font-size:12px"><b>📧 購入後の流れ</b><br>①購入確認メールが自動送信 → ②運営が対談リンクを登録し双方へ案内 → ③前日・当日にリマインドメール</div>
+    </aside>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap foot-in">
+    <div class="foot-brand"><span class="logo-mark">m!</span> まぐまぐストア <span class="demo-tag">デモ</span></div>
+    <nav class="foot-links">
+      <a href="terms.html">利用規約</a>
+      <a href="contact.html">お問い合わせ</a>
+      <a href="pages.html">📋 全ページ一覧（デモ用）</a>
+    </nav>
+    <p class="copyright">© 2026 まぐまぐストア（デモサイト）— 掲載の人物・商品・金額はすべて架空です。</p>
+  </div>
+</footer>
+<script src="assets/common.js"></script>
+</body>
+</html>

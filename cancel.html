@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>キャンセル申請 | まぐまぐストア</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Zen+Maru+Gothic:wght@700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="user">
+
+<header class="site-header">
+  <div class="wrap header-in">
+    <a class="logo" href="index.html"><span class="logo-mark">m!</span> まぐまぐストア</a>
+    <div class="header-actions"><a class="btn btn-ghost btn-sm" href="mypage.html">← マイページに戻る</a></div>
+  </div>
+</header>
+
+<main class="wrap" style="padding-top:30px;padding-bottom:60px;max-width:680px">
+  <h1 class="page-title">キャンセル申請</h1>
+  <p class="page-desc">申請いただいた内容を運営が確認し、承認後に返金いたします（半自動フロー）。</p>
+
+  <div class="card card-pad" style="margin-bottom:20px">
+    <div style="display:flex;gap:14px;justify-content:space-between;text-align:center;font-size:12px;font-weight:700">
+      <div style="flex:1"><div style="font-size:26px">📝</div>① お客さまが<br>画面から申請</div>
+      <div style="align-self:center;color:var(--faint)">→</div>
+      <div style="flex:1"><div style="font-size:26px">🔍</div>② 運営が内容を<br>確認・承認</div>
+      <div style="align-self:center;color:var(--faint)">→</div>
+      <div style="flex:1"><div style="font-size:26px">💴</div>③ 返金を実行<br>（メールで通知）</div>
+    </div>
+  </div>
+
+  <div class="card card-pad">
+    <div class="field">
+      <label>キャンセルする注文<span class="req">必須</span></label>
+      <select class="in">
+        <option>MG-2026-004512：事業相談・壁打ち 30分対談（7/8 13:00）¥33,000</option>
+      </select>
+    </div>
+    <div class="field">
+      <label>キャンセルの理由<span class="req">必須</span></label>
+      <div class="radio-row" style="flex-direction:column">
+        <label class="radio-card"><input type="radio" name="reason" checked>🙋 自分の都合（予定が合わなくなった等）</label>
+        <label class="radio-card"><input type="radio" name="reason">🎤 クリエイター側の都合（日程変更の連絡があった等）</label>
+        <label class="radio-card"><input type="radio" name="reason">❓ その他</label>
+      </div>
+    </div>
+    <div class="field">
+      <label>詳細（任意）</label>
+      <textarea class="in" placeholder="状況を教えてください。確認がスムーズになります。"></textarea>
+    </div>
+    <div class="note"><b>🔖 検討中の論点（社内メモ）</b> 返金基準の詳細（誰の都合ならいつまで全額返金か）と、無断キャンセル時のルールは未決定（§4-4, §4-10）。決定後にこの画面へ規定を表示します。</div>
+    <button class="btn btn-accent btn-block" data-demo-submit="（デモ）キャンセル申請を受け付けました。運営の確認後、結果をメールでお知らせします。" data-demo-next="mypage.html">この内容で申請する</button>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap foot-in">
+    <div class="foot-brand"><span class="logo-mark">m!</span> まぐまぐストア <span class="demo-tag">デモ</span></div>
+    <nav class="foot-links">
+      <a href="terms.html">利用規約</a>
+      <a href="contact.html">お問い合わせ</a>
+      <a href="pages.html">📋 全ページ一覧（デモ用）</a>
+    </nav>
+    <p class="copyright">© 2026 まぐまぐストア（デモサイト）— 掲載の人物・商品・金額はすべて架空です。</p>
+  </div>
+</footer>
+<script src="assets/common.js"></script>
+</body>
+</html>

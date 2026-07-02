@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>返金の承認・実行 | まぐまぐストア 管理</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Zen+Maru+Gothic:wght@700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="admin">
+
+<header class="app-header admin-h">
+  <div class="wrap header-in">
+    <a class="logo" href="admin-home.html"><span class="logo-mark">m!</span> まぐまぐストア <span class="role-badge">運営管理画面</span></a>
+    <div class="app-user">🛡️ 運営：山下 さん<a href="index.html">ストアを見る</a></div>
+  </div>
+</header>
+
+<div class="app-body wrap">
+  <aside class="side-nav">
+    <a href="admin-home.html">🏠 ダッシュボード</a>
+    <a href="admin-approvals.html">✅ 出品承認</a>
+    <a class="active" href="admin-refunds.html">💴 返金対応</a>
+    <div class="sep"></div>
+    <a href="admin-sales.html">📊 売上管理</a>
+    <a href="admin-payout.html">🏦 分配管理</a>
+    <a href="admin-creators.html">🎤 クリエイター管理</a>
+    <a href="admin-orders.html">🧾 注文管理</a>
+    <a href="admin-cs.html">💬 CS対応</a>
+    <div class="sep"></div>
+    <a href="admin-logs.html">🛡️ 操作ログ</a>
+  </aside>
+
+  <main class="app-main">
+    <h1 class="page-title">返金の承認・実行</h1>
+    <p class="page-desc">ユーザーからのキャンセル申請を確認し、承認すると返金が実行されます（半自動）。</p>
+
+    <div class="card card-pad" style="margin-bottom:20px">
+      <div style="display:flex;gap:14px;justify-content:space-between;text-align:center;font-size:12px;font-weight:700">
+        <div style="flex:1"><div style="font-size:24px">📝</div>ユーザーが申請</div>
+        <div style="align-self:center;color:var(--faint)">→</div>
+        <div style="flex:1;color:var(--accent)"><div style="font-size:24px">🔍</div>運営が承認（この画面）</div>
+        <div style="align-self:center;color:var(--faint)">→</div>
+        <div style="flex:1"><div style="font-size:24px">💳</div>決済代行経由で返金実行</div>
+        <div style="align-self:center;color:var(--faint)">→</div>
+        <div style="flex:1"><div style="font-size:24px">📧</div>双方へ自動メール</div>
+      </div>
+    </div>
+
+    <div class="card card-pad" style="margin-bottom:16px;border-left:4px solid var(--red)">
+      <span class="st st-ng">未対応</span>
+      <h2 style="font-size:16px;margin:6px 0 2px">MG-2026-004488：事業相談 30分対談 ¥33,000</h2>
+      <p style="font-size:13px;color:var(--sub)">申請者：佐藤 花子 さん ／ 7/2 申請 ／ 理由：<b>ユーザー都合</b>（急な出張のため）／ 対談予定日：7/11</p>
+      <div style="display:flex;gap:8px;margin-top:12px;flex-wrap:wrap">
+        <button class="btn btn-green btn-sm" data-demo-submit="（デモ）承認しました。返金が実行され、ユーザーとクリエイターにメールで通知されます。">✓ 承認して返金を実行</button>
+        <button class="btn btn-danger btn-sm" data-demo-submit="（デモ）却下理由の入力画面を開きます">✕ 却下</button>
+        <button class="btn btn-ghost btn-sm" data-demo-submit="（デモ）このユーザーとのやり取り履歴（CS）を開きます">💬 ユーザーに確認する</button>
+      </div>
+    </div>
+
+    <div class="card card-pad" style="margin-bottom:16px;border-left:4px solid var(--red)">
+      <span class="st st-ng">未対応</span>
+      <h2 style="font-size:16px;margin:6px 0 2px">MG-2026-004301：マーケ相談 45分対談 ¥27,500</h2>
+      <p style="font-size:13px;color:var(--sub)">申請者：伊藤 健 さん ／ 7/1 申請 ／ 理由：<b>クリエイター都合</b>（日程変更の連絡があった）／ 対談予定日：7/9</p>
+      <div style="display:flex;gap:8px;margin-top:12px;flex-wrap:wrap">
+        <button class="btn btn-green btn-sm" data-demo-submit="（デモ）承認しました。返金が実行され、双方にメールで通知されます。">✓ 承認して返金を実行</button>
+        <button class="btn btn-danger btn-sm" data-demo-submit="（デモ）却下理由の入力画面を開きます">✕ 却下</button>
+        <button class="btn btn-ghost btn-sm" data-demo-submit="（デモ）クリエイターへの確認画面を開きます">💬 クリエイターに確認する</button>
+      </div>
+    </div>
+
+    <div class="note"><b>🔖 検討中の論点（社内メモ）</b> 返金基準の詳細（§4-4）・無断キャンセル時のルール（§4-10）・決済代行の選定（§4-1）が未決定です。</div>
+
+    <h2 style="font-size:15px;margin:24px 0 10px">対応済み</h2>
+    <div class="card" style="overflow:hidden">
+      <table class="table">
+        <tr><th>注文番号</th><th>金額</th><th>理由</th><th>結果</th><th>対応日 / 担当</th></tr>
+        <tr><td>MG-2026-003877</td><td class="num">¥22,000</td><td>クリエイター都合</td><td><span class="st st-ok">全額返金済み</span></td><td>6/25 山下</td></tr>
+        <tr><td>MG-2026-003512</td><td class="num">¥1,650</td><td>ユーザー都合（誤購入）</td><td><span class="st st-ok">全額返金済み</span></td><td>6/18 田島</td></tr>
+      </table>
+    </div>
+  </main>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap foot-in">
+    <div class="foot-brand"><span class="logo-mark">m!</span> まぐまぐストア <span class="demo-tag">デモ</span></div>
+    <nav class="foot-links"><a href="pages.html">📋 全ページ一覧（デモ用）</a></nav>
+    <p class="copyright">© 2026 まぐまぐストア（デモサイト）— 掲載の人物・商品・金額はすべて架空です。</p>
+  </div>
+</footer>
+<script src="assets/common.js"></script>
+</body>
+</html>

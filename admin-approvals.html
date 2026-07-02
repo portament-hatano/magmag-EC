@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>出品承認 | まぐまぐストア 管理</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Zen+Maru+Gothic:wght@700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="admin">
+
+<header class="app-header admin-h">
+  <div class="wrap header-in">
+    <a class="logo" href="admin-home.html"><span class="logo-mark">m!</span> まぐまぐストア <span class="role-badge">運営管理画面</span></a>
+    <div class="app-user">🛡️ 運営：山下 さん<a href="index.html">ストアを見る</a></div>
+  </div>
+</header>
+
+<div class="app-body wrap">
+  <aside class="side-nav">
+    <a href="admin-home.html">🏠 ダッシュボード</a>
+    <a class="active" href="admin-approvals.html">✅ 出品承認</a>
+    <a href="admin-refunds.html">💴 返金対応</a>
+    <div class="sep"></div>
+    <a href="admin-sales.html">📊 売上管理</a>
+    <a href="admin-payout.html">🏦 分配管理</a>
+    <a href="admin-creators.html">🎤 クリエイター管理</a>
+    <a href="admin-orders.html">🧾 注文管理</a>
+    <a href="admin-cs.html">💬 CS対応</a>
+    <div class="sep"></div>
+    <a href="admin-logs.html">🛡️ 操作ログ</a>
+  </aside>
+
+  <main class="app-main">
+    <h1 class="page-title">出品承認</h1>
+    <p class="page-desc">新規出品・公開申請を審査します。<b>価格と内容の両方</b>が審査対象です。</p>
+
+    <div class="note"><b>🔖 検討中の論点（社内メモ）</b> 審査基準と目安日数（何営業日以内に判断するか）は未決定（§4-3）。</div>
+
+    <div class="card card-pad" style="margin-bottom:16px;border-left:4px solid var(--gold)">
+      <div style="display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap">
+        <div>
+          <span class="st st-wait">新規出品</span> <span class="type-badge arch">アーカイブ</span>
+          <h2 style="font-size:16px;margin:6px 0 2px">起業の現場から 2026年7月号（全9通）</h2>
+          <p style="font-size:13px;color:var(--sub)">堀川 蓮 ／ ¥1,650 ／ 7/2 申請（2日経過）</p>
+          <p style="font-size:13px;margin-top:8px">説明文：「7月は資金調達特集。シリーズAの実例を9通にわたって…」</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:8px;justify-content:center">
+          <button class="btn btn-ghost btn-sm" data-demo-submit="（デモ）内容プレビューを開きます（全9通の本文と価格を確認）">📄 内容を確認</button>
+          <button class="btn btn-green btn-sm" data-demo-submit="（デモ）承認しました。商品はストアに公開され、クリエイターに通知されます。">✓ 承認して公開</button>
+          <button class="btn btn-danger btn-sm" data-demo-submit="（デモ）差戻しの理由を入力する画面を開きます。クリエイターに通知されます。">✕ 差戻し</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card card-pad" style="margin-bottom:16px;border-left:4px solid var(--gold)">
+      <div style="display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap">
+        <div>
+          <span class="st st-wait">公開申請</span> <span class="type-badge arch">アーカイブ</span>
+          <h2 style="font-size:16px;margin:6px 0 2px">売れる仕組み研究室 2025年下半期セット（全24通）</h2>
+          <p style="font-size:13px;color:var(--sub)">早乙女 香織 ／ ¥5,500 ／ 7/3 申請（本日）・過去に公開実績あり（再公開）</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:8px;justify-content:center">
+          <button class="btn btn-ghost btn-sm" data-demo-submit="（デモ）内容プレビューを開きます">📄 内容を確認</button>
+          <button class="btn btn-green btn-sm" data-demo-submit="（デモ）承認しました。商品はストアに公開されます。">✓ 承認して公開</button>
+          <button class="btn btn-danger btn-sm" data-demo-submit="（デモ）差戻しの理由を入力する画面を開きます">✕ 差戻し</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card card-pad" style="margin-bottom:16px;border-left:4px solid var(--gold)">
+      <div style="display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap">
+        <div>
+          <span class="st st-wait">新規出品</span> <span class="type-badge talk">対談権</span>
+          <h2 style="font-size:16px;margin:6px 0 2px">組織づくり相談 45分オンライン対談</h2>
+          <p style="font-size:13px;color:var(--sub)">神谷 真琴 ／ ¥26,000 ／ 7/1 申請（3日経過）⚠️ 最古</p>
+          <p style="font-size:12.5px;margin-top:6px;color:var(--sub)">※ この申請は運営・田島が代理登録したものです（<a href="admin-logs.html" style="text-decoration:underline">操作ログ</a>）</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:8px;justify-content:center">
+          <button class="btn btn-ghost btn-sm" data-demo-submit="（デモ）内容プレビューを開きます">📄 内容を確認</button>
+          <button class="btn btn-green btn-sm" data-demo-submit="（デモ）承認しました。商品はストアに公開されます。">✓ 承認して公開</button>
+          <button class="btn btn-danger btn-sm" data-demo-submit="（デモ）差戻しの理由を入力する画面を開きます">✕ 差戻し</button>
+        </div>
+      </div>
+    </div>
+
+    <h2 style="font-size:15px;margin:24px 0 10px">最近の審査履歴</h2>
+    <div class="card" style="overflow:hidden">
+      <table class="table">
+        <tr><th>審査日</th><th>商品</th><th>クリエイター</th><th>結果</th><th>担当</th></tr>
+        <tr><td>7/1</td><td>AI経営メモ 6月号</td><td>大森 一樹</td><td><span class="st st-ok">承認</span></td><td>山下</td></tr>
+        <tr><td>6/30</td><td>マーケットの読み方 6月号</td><td>三嶋 剛</td><td><span class="st st-ok">承認</span></td><td>田島</td></tr>
+        <tr><td>6/28</td><td>特別対談 90分 ¥180,000</td><td>（新規申請）</td><td><span class="st st-ng">差戻し（価格の根拠不足）</span></td><td>山下</td></tr>
+      </table>
+    </div>
+  </main>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap foot-in">
+    <div class="foot-brand"><span class="logo-mark">m!</span> まぐまぐストア <span class="demo-tag">デモ</span></div>
+    <nav class="foot-links"><a href="pages.html">📋 全ページ一覧（デモ用）</a></nav>
+    <p class="copyright">© 2026 まぐまぐストア（デモサイト）— 掲載の人物・商品・金額はすべて架空です。</p>
+  </div>
+</footer>
+<script src="assets/common.js"></script>
+</body>
+</html>

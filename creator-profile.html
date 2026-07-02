@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>プロフィール編集 | まぐまぐストア クリエイター</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Zen+Maru+Gothic:wght@700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="creator">
+
+<header class="app-header creator-h">
+  <div class="wrap header-in">
+    <a class="logo" href="creator-home.html"><span class="logo-mark">m!</span> まぐまぐストア <span class="role-badge">クリエイター画面</span></a>
+    <div class="app-user">🎤 堀川 蓮 さん<a href="index.html">ストアを見る</a></div>
+  </div>
+</header>
+
+<div class="app-body wrap">
+  <aside class="side-nav">
+    <a href="creator-home.html">🏠 ダッシュボード</a>
+    <a class="active" href="creator-profile.html">👤 プロフィール編集</a>
+    <a href="creator-items.html">📦 出品管理</a>
+    <a href="creator-bookings.html">📅 予約確認</a>
+    <a href="creator-sales.html">💰 売上・分配</a>
+  </aside>
+
+  <main class="app-main">
+    <h1 class="page-title">プロフィール編集</h1>
+    <p class="page-desc">ここで編集した内容は、あなたの商品詳細ページに表示されます。</p>
+
+    <div class="card card-pad" style="max-width:640px">
+      <div class="field">
+        <label>プロフィール写真</label>
+        <div style="display:flex;gap:16px;align-items:center">
+          <span class="avatar xl av1">堀</span>
+          <button class="btn btn-ghost btn-sm" data-demo-submit="（デモ）画像のアップロード画面を開きます">画像を変更</button>
+        </div>
+      </div>
+      <div class="field">
+        <label>表示名<span class="req">必須</span></label>
+        <input class="in" value="堀川 蓮">
+      </div>
+      <div class="field">
+        <label>肩書き</label>
+        <input class="in" value="連続起業家 / 「起業の現場から」発行">
+      </div>
+      <div class="field">
+        <label>紹介文<span class="req">必須</span></label>
+        <textarea class="in" style="min-height:130px">連続起業家。3社を創業し2社をイグジット。現在はスタートアップ約20社に出資・伴走中。メルマガ「起業の現場から」は読者数3.2万人。</textarea>
+        <p class="form-hint">商品ページのクリエイター紹介欄に表示されます</p>
+      </div>
+      <div class="field">
+        <label>X（Twitter）アカウント</label>
+        <input class="in" value="@horikawa_ren">
+      </div>
+      <button class="btn btn-primary" data-demo-submit="（デモ）プロフィールを保存しました。商品ページに反映されます。">保存する</button>
+      <a class="btn btn-ghost" href="product-talk.html" style="margin-left:8px">商品ページでの見え方を確認</a>
+    </div>
+  </main>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap foot-in">
+    <div class="foot-brand"><span class="logo-mark">m!</span> まぐまぐストア <span class="demo-tag">デモ</span></div>
+    <nav class="foot-links"><a href="pages.html">📋 全ページ一覧（デモ用）</a></nav>
+    <p class="copyright">© 2026 まぐまぐストア（デモサイト）— 掲載の人物・商品・金額はすべて架空です。</p>
+  </div>
+</footer>
+<script src="assets/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>売上・分配確認 | まぐまぐストア クリエイター</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Zen+Maru+Gothic:wght@700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="creator">
+
+<header class="app-header creator-h">
+  <div class="wrap header-in">
+    <a class="logo" href="creator-home.html"><span class="logo-mark">m!</span> まぐまぐストア <span class="role-badge">クリエイター画面</span></a>
+    <div class="app-user">🎤 堀川 蓮 さん<a href="index.html">ストアを見る</a></div>
+  </div>
+</header>
+
+<div class="app-body wrap">
+  <aside class="side-nav">
+    <a href="creator-home.html">🏠 ダッシュボード</a>
+    <a href="creator-profile.html">👤 プロフィール編集</a>
+    <a href="creator-items.html">📦 出品管理</a>
+    <a href="creator-bookings.html">📅 予約確認</a>
+    <a class="active" href="creator-sales.html">💰 売上・分配</a>
+  </aside>
+
+  <main class="app-main">
+    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
+      <div>
+        <h1 class="page-title">売上・分配確認</h1>
+        <p class="page-desc">月次の売上と、あなたの取り分（分配額）を確認できます。</p>
+      </div>
+      <select class="in" style="width:auto"><option>2026年6月</option><option>2026年5月</option><option>2026年4月</option></select>
+    </div>
+
+    <div class="stats" style="grid-template-columns:repeat(3,1fr)">
+      <div class="stat"><p class="lbl">6月の総売上</p><p class="num">¥589,600</p><p class="diff">対談 12件 / アーカイブ 96件</p></div>
+      <div class="stat"><p class="lbl">あなたの分配額（70%）</p><p class="num" style="color:var(--green)">¥412,720</p></div>
+      <div class="stat"><p class="lbl">お振込予定</p><p class="num" style="font-size:18px">7月31日</p><p class="diff" style="color:var(--sub)">登録口座：◯◯銀行 ****123</p></div>
+    </div>
+
+    <h2 style="font-size:16px;margin:8px 0 12px">📊 月別の売上推移</h2>
+    <div class="card card-pad" style="padding-bottom:44px;margin-bottom:24px">
+      <div class="bars">
+        <div class="bar" style="height:38%"><em>¥21万</em><span>1月</span></div>
+        <div class="bar" style="height:52%"><em>¥29万</em><span>2月</span></div>
+        <div class="bar" style="height:46%"><em>¥26万</em><span>3月</span></div>
+        <div class="bar" style="height:70%"><em>¥39万</em><span>4月</span></div>
+        <div class="bar" style="height:63%"><em>¥35万</em><span>5月</span></div>
+        <div class="bar hl" style="height:100%"><em>¥59万</em><span>6月</span></div>
+      </div>
+    </div>
+
+    <h2 style="font-size:16px;margin-bottom:12px">🧾 商品別の内訳（6月）</h2>
+    <div class="card" style="overflow:hidden">
+      <table class="table">
+        <tr><th>商品</th><th class="num">販売数</th><th class="num">売上</th><th class="num">分配額（70%）</th></tr>
+        <tr><td>事業相談・壁打ち 30分対談</td><td class="num">9</td><td class="num">¥297,000</td><td class="num">¥207,900</td></tr>
+        <tr><td>じっくり相談 60分対談</td><td class="num">3</td><td class="num">¥165,000</td><td class="num">¥115,500</td></tr>
+        <tr><td>起業の現場から 6月号</td><td class="num">64</td><td class="num">¥105,600</td><td class="num">¥73,920</td></tr>
+        <tr><td>起業の現場から 5月号</td><td class="num">32</td><td class="num">¥22,000</td><td class="num">¥15,400</td></tr>
+      </table>
+    </div>
+
+    <div class="note" style="margin-top:16px"><b>🔖 検討中の論点（社内メモ）</b> 支払いサイクル（締め日・支払日）・最低支払額・インボイス対応の詳細は未決定（§4-6, §4-7）。この画面の表示は仮です。</div>
+  </main>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap foot-in">
+    <div class="foot-brand"><span class="logo-mark">m!</span> まぐまぐストア <span class="demo-tag">デモ</span></div>
+    <nav class="foot-links"><a href="pages.html">📋 全ページ一覧（デモ用）</a></nav>
+    <p class="copyright">© 2026 まぐまぐストア（デモサイト）— 掲載の人物・商品・金額はすべて架空です。</p>
+  </div>
+</footer>
+<script src="assets/common.js"></script>
+</body>
+</html>

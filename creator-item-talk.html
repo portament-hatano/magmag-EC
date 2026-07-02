@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>対談権の登録・空き時間 | まぐまぐストア クリエイター</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Zen+Maru+Gothic:wght@700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="creator">
+
+<header class="app-header creator-h">
+  <div class="wrap header-in">
+    <a class="logo" href="creator-home.html"><span class="logo-mark">m!</span> まぐまぐストア <span class="role-badge">クリエイター画面</span></a>
+    <div class="app-user">🎤 堀川 蓮 さん<a href="index.html">ストアを見る</a></div>
+  </div>
+</header>
+
+<div class="app-body wrap">
+  <aside class="side-nav">
+    <a href="creator-home.html">🏠 ダッシュボード</a>
+    <a href="creator-profile.html">👤 プロフィール編集</a>
+    <a class="active" href="creator-items.html">📦 出品管理</a>
+    <a href="creator-bookings.html">📅 予約確認</a>
+    <a href="creator-sales.html">💰 売上・分配</a>
+  </aside>
+
+  <main class="app-main">
+    <p style="font-size:12px;color:var(--faint);margin-bottom:10px"><a href="creator-items.html">出品管理</a> › 対談権の登録</p>
+    <h1 class="page-title">🎤 対談権を出品する</h1>
+    <p class="page-desc">価格・時間・形式を設定し、対談できる空き時間を登録します。</p>
+
+    <div class="card card-pad" style="max-width:680px;margin-bottom:22px">
+      <h2 style="font-size:16px;margin-bottom:14px">① 商品の設定</h2>
+      <div class="field">
+        <label>商品タイトル<span class="req">必須</span></label>
+        <input class="in" value="事業相談・壁打ち 30分オンライン対談">
+      </div>
+      <div style="display:flex;gap:14px;flex-wrap:wrap">
+        <div class="field" style="flex:1;min-width:140px">
+          <label>時間<span class="req">必須</span></label>
+          <select class="in"><option>30分</option><option>45分</option><option>60分</option></select>
+        </div>
+        <div class="field" style="flex:1;min-width:160px">
+          <label>価格（税込）<span class="req">必須</span></label>
+          <input class="in" value="33,000">
+        </div>
+      </div>
+      <div class="field">
+        <label>形式<span class="req">必須</span></label>
+        <div class="radio-row">
+          <label class="radio-card"><input type="radio" name="fmt" checked>💻 オンラインのみ</label>
+          <label class="radio-card"><input type="radio" name="fmt">🏢 対面のみ</label>
+          <label class="radio-card"><input type="radio" name="fmt">両方OK</label>
+        </div>
+        <p class="form-hint">オンラインの対談リンク（Zoom等）は運営が登録し、双方に自動案内されます</p>
+      </div>
+      <div class="field">
+        <label>商品説明<span class="req">必須</span></label>
+        <textarea class="in">新規事業の壁打ち、資金調達の相談、起業前のキャリア相談など、テーマは自由です。</textarea>
+      </div>
+    </div>
+
+    <div class="card card-pad" style="max-width:680px">
+      <h2 style="font-size:16px;margin-bottom:6px">② 空き時間の登録</h2>
+      <p style="font-size:12.5px;color:var(--sub);margin-bottom:14px">対談を受けられる日時を登録してください。ユーザーはこの中から予約します。<br>※ カレンダーツールとの連携はありません（手入力・決定済み方針）</p>
+      <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:14px">
+        <input class="in" type="date" value="2026-07-16" style="width:auto">
+        <select class="in" style="width:auto"><option>20:00</option><option>10:00</option><option>13:00</option><option>16:00</option></select>
+        <button class="btn btn-primary btn-sm" data-demo-submit="（デモ）空き枠を追加しました。">＋ 枠を追加</button>
+      </div>
+      <table class="table">
+        <tr><th>登録済みの空き枠</th><th>状態</th><th></th></tr>
+        <tr><td>7/6(月) 16:00 / 20:00</td><td><span class="st st-ok">予約受付中</span></td><td><button class="btn btn-ghost btn-sm" data-demo-submit="（デモ）枠を削除しました。">削除</button></td></tr>
+        <tr><td>7/7(火) 10:00 / 20:00</td><td><span class="st st-ok">予約受付中</span></td><td><button class="btn btn-ghost btn-sm" data-demo-submit="（デモ）枠を削除しました。">削除</button></td></tr>
+        <tr><td>7/8(水) 13:00</td><td><span class="st st-navy">予約済み（山田さん）</span></td><td><span style="font-size:11px;color:var(--faint)">予約済みの枠は削除できません</span></td></tr>
+      </table>
+      <div class="note note-info" style="margin-bottom:0"><b>ℹ️ 表示のルール</b> 対談権を出品しないクリエイターには、この空き時間画面は表示されません（要件定義 §3-B）。</div>
+    </div>
+
+    <div style="max-width:680px;margin-top:18px">
+      <button class="btn btn-accent" data-demo-submit="（デモ）登録しました。運営の承認後に公開されます（状態：承認待ち）。" data-demo-next="creator-items.html">登録して審査に出す</button>
+      <button class="btn btn-ghost" data-demo-submit="（デモ）下書きとして保存しました。" style="margin-left:8px">下書き保存</button>
+    </div>
+  </main>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap foot-in">
+    <div class="foot-brand"><span class="logo-mark">m!</span> まぐまぐストア <span class="demo-tag">デモ</span></div>
+    <nav class="foot-links"><a href="pages.html">📋 全ページ一覧（デモ用）</a></nav>
+    <p class="copyright">© 2026 まぐまぐストア（デモサイト）— 掲載の人物・商品・金額はすべて架空です。</p>
+  </div>
+</footer>
+<script src="assets/common.js"></script>
+</body>
+</html>

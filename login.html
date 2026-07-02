@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ログイン | まぐまぐストア</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Zen+Maru+Gothic:wght@700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="user">
+
+<header class="site-header">
+  <div class="wrap header-in">
+    <a class="logo" href="index.html"><span class="logo-mark">m!</span> まぐまぐストア</a>
+    <nav class="gnav">
+      <a href="products.html">商品をさがす</a>
+      <a href="contact.html">お問い合わせ</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap" style="padding:56px 24px 80px;max-width:520px">
+  <h1 class="page-title" style="text-align:center">ログイン / 会員登録</h1>
+  <p class="page-desc" style="text-align:center">まぐまぐIDをお持ちの方は、そのままご利用いただけます。</p>
+
+  <div class="card card-pad" style="padding:34px">
+    <a class="btn btn-accent btn-lg btn-block" href="mypage.html">m! まぐまぐIDでログイン</a>
+    <p class="form-hint" style="text-align:center;margin-top:10px">まぐまぐの既存アカウントと連携してログインします</p>
+
+    <div style="display:flex;align-items:center;gap:14px;margin:26px 0;color:var(--faint);font-size:12px">
+      <span style="flex:1;border-top:1px solid var(--line)"></span>または<span style="flex:1;border-top:1px solid var(--line)"></span>
+    </div>
+
+    <div class="field">
+      <label>メールアドレス</label>
+      <input class="in" type="email" placeholder="you@example.com">
+    </div>
+    <div class="field">
+      <label>パスワード</label>
+      <input class="in" type="password" placeholder="••••••••">
+    </div>
+    <button class="btn btn-primary btn-block" data-demo-submit="（デモ）ログインしました。マイページへ移動します。" data-demo-next="mypage.html">ログイン</button>
+    <p style="text-align:center;font-size:12.5px;margin-top:14px"><a href="#" style="text-decoration:underline;color:var(--sub)">パスワードをお忘れの方</a>　|　<a href="#" style="text-decoration:underline;color:var(--sub)">新規会員登録</a></p>
+  </div>
+
+  <div class="note note-info" style="margin-top:22px"><b>🔖 検討中の論点（社内メモ）</b><br>まぐまぐ既存IDとの連携方式は未決定（要件定義 §4-9）。このページはデモとして枠のみ実装しています。</div>
+
+  <p style="text-align:center;margin-top:18px;font-size:13px"><a href="creator-home.html" style="text-decoration:underline;color:var(--sub)">クリエイターの方はこちら →</a></p>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap foot-in">
+    <div class="foot-brand"><span class="logo-mark">m!</span> まぐまぐストア <span class="demo-tag">デモ</span></div>
+    <nav class="foot-links">
+      <a href="terms.html">利用規約</a>
+      <a href="terms.html">プライバシーポリシー</a>
+      <a href="terms.html">特定商取引法に基づく表記</a>
+      <a href="contact.html">お問い合わせ</a>
+      <a href="pages.html">📋 全ページ一覧（デモ用）</a>
+    </nav>
+    <p class="copyright">© 2026 まぐまぐストア（デモサイト）— 掲載の人物・商品・金額はすべて架空です。</p>
+  </div>
+</footer>
+<script src="assets/common.js"></script>
+</body>
+</html>

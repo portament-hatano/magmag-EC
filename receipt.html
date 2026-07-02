@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>領収書の発行 | まぐまぐストア</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Zen+Maru+Gothic:wght@700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="user">
+
+<header class="site-header">
+  <div class="wrap header-in">
+    <a class="logo" href="index.html"><span class="logo-mark">m!</span> まぐまぐストア</a>
+    <div class="header-actions"><a class="btn btn-ghost btn-sm" href="mypage.html">← マイページに戻る</a></div>
+  </div>
+</header>
+
+<main class="wrap" style="padding-top:30px;padding-bottom:60px">
+  <h1 class="page-title no-print" style="text-align:center">領収書の発行</h1>
+  <p class="page-desc no-print" style="text-align:center">宛名を入力して「印刷 / PDF保存」を押してください。経費精算にご利用いただけます。</p>
+
+  <div class="no-print" style="max-width:640px;margin:0 auto 20px;display:flex;gap:12px;align-items:flex-end">
+    <div class="field" style="flex:1;margin-bottom:0">
+      <label>宛名（会社名・氏名）</label>
+      <input class="in" id="atena" value="株式会社サンプル商事" oninput="document.getElementById('r-atena').textContent=this.value">
+    </div>
+    <button class="btn btn-primary" onclick="window.print()">🖨 印刷 / PDF保存</button>
+  </div>
+
+  <div class="receipt">
+    <h1>領収書</h1>
+    <p style="font-size:15px;border-bottom:1px solid var(--ink);display:inline-block;padding:0 10px 4px;min-width:280px"><span id="r-atena">株式会社サンプル商事</span>　様</p>
+    <p class="r-amount">¥33,000 −</p>
+    <p style="text-align:center;font-size:13px">但し、対談サービス利用料として<br>上記正に領収いたしました</p>
+    <table>
+      <tr><td style="color:var(--sub);width:110px">発行日</td><td>2026年7月3日</td></tr>
+      <tr><td style="color:var(--sub)">注文番号</td><td>MG-2026-004512</td></tr>
+      <tr><td style="color:var(--sub)">内訳</td><td>商品代金 ¥30,000 ／ 消費税(10%) ¥3,000</td></tr>
+      <tr><td style="color:var(--sub)">支払方法</td><td>クレジットカード</td></tr>
+    </table>
+    <div style="margin-top:26px;display:flex;justify-content:space-between;align-items:flex-end">
+      <p style="font-size:11px;color:var(--sub)">登録番号: T0-0000-0000-0000（デモ）</p>
+      <div style="text-align:center;font-size:12.5px">
+        <b>まぐまぐストア（デモ）</b><br>東京都◯◯区◯◯ 1-2-3<br>
+        <span style="display:inline-block;border:2px solid var(--red);color:var(--red);border-radius:50%;padding:10px 8px;font-size:10px;margin-top:6px;transform:rotate(-8deg)">まぐまぐ<br>ストア印</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="note note-info no-print" style="max-width:640px;margin:20px auto 0"><b>ℹ️ 実装メモ</b> 実サービスではPDFダウンロード形式を想定。インボイス（適格請求書）対応の詳細は分配管理の論点（§4-7）と合わせて決定します。</div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap foot-in">
+    <div class="foot-brand"><span class="logo-mark">m!</span> まぐまぐストア <span class="demo-tag">デモ</span></div>
+    <nav class="foot-links">
+      <a href="terms.html">利用規約</a>
+      <a href="contact.html">お問い合わせ</a>
+      <a href="pages.html">📋 全ページ一覧（デモ用）</a>
+    </nav>
+    <p class="copyright">© 2026 まぐまぐストア（デモサイト）— 掲載の人物・商品・金額はすべて架空です。</p>
+  </div>
+</footer>
+<script src="assets/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>操作ログ | まぐまぐストア 管理</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Zen+Maru+Gothic:wght@700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="admin">
+
+<header class="app-header admin-h">
+  <div class="wrap header-in">
+    <a class="logo" href="admin-home.html"><span class="logo-mark">m!</span> まぐまぐストア <span class="role-badge">運営管理画面</span></a>
+    <div class="app-user">🛡️ 運営：山下 さん<a href="index.html">ストアを見る</a></div>
+  </div>
+</header>
+
+<div class="app-body wrap">
+  <aside class="side-nav">
+    <a href="admin-home.html">🏠 ダッシュボード</a>
+    <a href="admin-approvals.html">✅ 出品承認</a>
+    <a href="admin-refunds.html">💴 返金対応</a>
+    <div class="sep"></div>
+    <a href="admin-sales.html">📊 売上管理</a>
+    <a href="admin-payout.html">🏦 分配管理</a>
+    <a href="admin-creators.html">🎤 クリエイター管理</a>
+    <a href="admin-orders.html">🧾 注文管理</a>
+    <a href="admin-cs.html">💬 CS対応</a>
+    <div class="sep"></div>
+    <a class="active" href="admin-logs.html">🛡️ 操作ログ</a>
+  </aside>
+
+  <main class="app-main">
+    <h1 class="page-title">操作ログ（代理操作の記録）</h1>
+    <p class="page-desc">運営による代理ログイン・代理操作の記録です。誰が・いつ・誰のアカウントで・何をしたかを保存します。</p>
+
+    <div class="note note-danger"><b>🛡️ 内部統制上の必須要件</b> 上場企業グループのため、代理操作のログは<b>改ざん不可の形で保存し、削除できません</b>（要件定義 §2, §5）。監査時に出力できます。</div>
+
+    <div class="filter-bar">
+      <select class="in" style="width:auto"><option>操作者：すべて</option><option>山下</option><option>田島</option></select>
+      <select class="in" style="width:auto"><option>対象クリエイター：すべて</option><option>堀川 蓮</option><option>神谷 真琴</option></select>
+      <input class="in" type="date" value="2026-07-01" style="width:auto"> 〜 <input class="in" type="date" value="2026-07-03" style="width:auto">
+      <button class="btn btn-primary btn-sm">絞り込む</button>
+      <button class="btn btn-ghost btn-sm" data-demo-submit="（デモ）監査用CSVを出力します" style="margin-left:auto">⬇ 監査用CSV出力</button>
+    </div>
+
+    <div class="card" style="overflow:hidden">
+      <table class="table">
+        <tr><th>日時</th><th>操作者（運営）</th><th>対象アカウント</th><th>操作内容</th><th>IPアドレス</th></tr>
+        <tr><td>7/3 08:31</td><td>田島</td><td>神谷 真琴</td><td>代理ログイン 開始</td><td>203.0.113.24</td></tr>
+        <tr><td>7/3 08:34</td><td>田島</td><td>神谷 真琴</td><td>商品「組織づくり相談 45分」を代理登録（価格 ¥26,000）→ 承認待ちへ</td><td>203.0.113.24</td></tr>
+        <tr><td>7/3 08:36</td><td>田島</td><td>神谷 真琴</td><td>空き時間を3枠 代理登録（7/18, 7/25, 8/1）</td><td>203.0.113.24</td></tr>
+        <tr><td>7/3 08:37</td><td>田島</td><td>神谷 真琴</td><td>代理ログイン 終了（滞在 6分）</td><td>203.0.113.24</td></tr>
+        <tr><td>7/1 15:02</td><td>山下</td><td>白石 悠</td><td>代理ログイン 開始（オンボーディング支援）</td><td>203.0.113.11</td></tr>
+        <tr><td>7/1 15:10</td><td>山下</td><td>白石 悠</td><td>プロフィール文を代理編集</td><td>203.0.113.11</td></tr>
+        <tr><td>7/1 15:12</td><td>山下</td><td>白石 悠</td><td>代理ログイン 終了（滞在 10分）</td><td>203.0.113.11</td></tr>
+        <tr><td>6/28 11:45</td><td>山下</td><td>堀川 蓮</td><td>商品「じっくり相談 60分」の説明文を代理修正（誤字）</td><td>203.0.113.11</td></tr>
+      </table>
+    </div>
+
+    <p style="font-size:12.5px;color:var(--sub);margin-top:12px">💡 デモでは <a href="admin-creators.html" style="text-decoration:underline;color:var(--navy)">クリエイター管理</a> の「代理ログイン」ボタンから、実際に代理操作中の画面（バナー表示）を体験できます。</p>
+  </main>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap foot-in">
+    <div class="foot-brand"><span class="logo-mark">m!</span> まぐまぐストア <span class="demo-tag">デモ</span></div>
+    <nav class="foot-links"><a href="pages.html">📋 全ページ一覧（デモ用）</a></nav>
+    <p class="copyright">© 2026 まぐまぐストア（デモサイト）— 掲載の人物・商品・金額はすべて架空です。</p>
+  </div>
+</footer>
+<script src="assets/common.js"></script>
+</body>
+</html>

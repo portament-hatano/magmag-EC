@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>出品管理 | まぐまぐストア クリエイター</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Zen+Maru+Gothic:wght@700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="creator">
+
+<header class="app-header creator-h">
+  <div class="wrap header-in">
+    <a class="logo" href="creator-home.html"><span class="logo-mark">m!</span> まぐまぐストア <span class="role-badge">クリエイター画面</span></a>
+    <div class="app-user">🎤 堀川 蓮 さん<a href="index.html">ストアを見る</a></div>
+  </div>
+</header>
+
+<div class="app-body wrap">
+  <aside class="side-nav">
+    <a href="creator-home.html">🏠 ダッシュボード</a>
+    <a href="creator-profile.html">👤 プロフィール編集</a>
+    <a class="active" href="creator-items.html">📦 出品管理</a>
+    <a href="creator-bookings.html">📅 予約確認</a>
+    <a href="creator-sales.html">💰 売上・分配</a>
+  </aside>
+
+  <main class="app-main">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px">
+      <div>
+        <h1 class="page-title">出品管理</h1>
+        <p class="page-desc">商品の登録・編集と、公開・非公開の切り替えができます。</p>
+      </div>
+      <div style="display:flex;gap:10px">
+        <a class="btn btn-accent" href="creator-item-talk.html">＋ 対談権を出品</a>
+        <a class="btn btn-primary" href="creator-item-archive.html">＋ バックナンバーを出品</a>
+      </div>
+    </div>
+
+    <div class="note note-info"><b>ℹ️ 公開のルール</b> <b>非公開はすぐに反映</b>されます。<b>新しく公開する場合は運営の承認後</b>に反映されます（非対称ルール・決定済み方針）。</div>
+
+    <div class="card" style="overflow:hidden">
+      <table class="table">
+        <tr><th>商品</th><th>種類</th><th class="num">価格</th><th>状態</th><th>操作</th></tr>
+        <tr>
+          <td><b>事業相談・壁打ち 30分オンライン対談</b></td>
+          <td><span class="type-badge talk">対談権</span></td>
+          <td class="num">¥33,000</td>
+          <td><span class="st st-ok">公開中</span></td>
+          <td><button class="btn btn-ghost btn-sm" data-demo-submit="（デモ）非公開にしました。即時に反映されます。">非公開にする</button> <a class="btn btn-ghost btn-sm" href="creator-item-talk.html">編集</a></td>
+        </tr>
+        <tr>
+          <td><b>じっくり相談 60分対談（オンライン／対面）</b></td>
+          <td><span class="type-badge talk">対談権</span></td>
+          <td class="num">¥55,000</td>
+          <td><span class="st st-ok">公開中</span></td>
+          <td><button class="btn btn-ghost btn-sm" data-demo-submit="（デモ）非公開にしました。即時に反映されます。">非公開にする</button> <a class="btn btn-ghost btn-sm" href="creator-item-talk.html">編集</a></td>
+        </tr>
+        <tr>
+          <td><b>起業の現場から 2026年6月号（全8通）</b></td>
+          <td><span class="type-badge arch">アーカイブ</span></td>
+          <td class="num">¥1,650</td>
+          <td><span class="st st-ok">公開中</span></td>
+          <td><button class="btn btn-ghost btn-sm" data-demo-submit="（デモ）非公開にしました。即時に反映されます。">非公開にする</button> <a class="btn btn-ghost btn-sm" href="creator-item-archive.html">編集</a></td>
+        </tr>
+        <tr class="tr-hl">
+          <td><b>起業の現場から 2026年7月号（全9通）</b></td>
+          <td><span class="type-badge arch">アーカイブ</span></td>
+          <td class="num">¥1,650</td>
+          <td><span class="st st-wait">承認待ち</span></td>
+          <td><span style="font-size:12px;color:var(--sub)">運営が審査中です（7/2 申請）</span></td>
+        </tr>
+        <tr>
+          <td><b>起業の現場から 2026年5月号（全8通）</b></td>
+          <td><span class="type-badge arch">アーカイブ</span></td>
+          <td class="num">¥1,650</td>
+          <td><span class="st st-off">非公開</span></td>
+          <td><button class="btn btn-primary btn-sm" data-demo-submit="（デモ）公開を申請しました。運営の承認後に公開されます。">公開を申請する</button></td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="note" style="margin-top:18px"><b>🚀 今後の予定</b> 出品できる商品タイプは今後追加予定です（拡張前提の設計・要件定義 §5）。</div>
+  </main>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap foot-in">
+    <div class="foot-brand"><span class="logo-mark">m!</span> まぐまぐストア <span class="demo-tag">デモ</span></div>
+    <nav class="foot-links"><a href="pages.html">📋 全ページ一覧（デモ用）</a></nav>
+    <p class="copyright">© 2026 まぐまぐストア（デモサイト）— 掲載の人物・商品・金額はすべて架空です。</p>
+  </div>
+</footer>
+<script src="assets/common.js"></script>
+</body>
+</html>

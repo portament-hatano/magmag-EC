@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>予約確認 | まぐまぐストア クリエイター</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Zen+Maru+Gothic:wght@700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="creator">
+
+<header class="app-header creator-h">
+  <div class="wrap header-in">
+    <a class="logo" href="creator-home.html"><span class="logo-mark">m!</span> まぐまぐストア <span class="role-badge">クリエイター画面</span></a>
+    <div class="app-user">🎤 堀川 蓮 さん<a href="index.html">ストアを見る</a></div>
+  </div>
+</header>
+
+<div class="app-body wrap">
+  <aside class="side-nav">
+    <a href="creator-home.html">🏠 ダッシュボード</a>
+    <a href="creator-profile.html">👤 プロフィール編集</a>
+    <a href="creator-items.html">📦 出品管理</a>
+    <a class="active" href="creator-bookings.html">📅 予約確認</a>
+    <a href="creator-sales.html">💰 売上・分配</a>
+  </aside>
+
+  <main class="app-main">
+    <h1 class="page-title">予約確認</h1>
+    <p class="page-desc">あなたの対談予約の一覧です。日時・お相手・形式を確認できます。</p>
+
+    <div class="chips" style="margin-bottom:16px">
+      <button class="chip active">これから（5件）</button>
+      <button class="chip">実施済み</button>
+      <button class="chip">キャンセル</button>
+    </div>
+
+    <div class="card" style="overflow:hidden">
+      <table class="table">
+        <tr><th>日時</th><th>お相手</th><th>商品</th><th>形式</th><th>対談リンク</th><th>状態</th></tr>
+        <tr>
+          <td><b>7/8(水) 13:00〜13:30</b></td><td>山田 太郎 さん</td><td>事業相談・壁打ち 30分</td><td>💻 オンライン</td>
+          <td><a href="#" onclick="alert('（デモ）Zoomを開きます');return false" style="color:var(--navy);text-decoration:underline">🔗 Zoomリンク</a><br><span style="font-size:11px;color:var(--sub)">運営が登録済み</span></td>
+          <td><span class="st st-ok">確定</span></td>
+        </tr>
+        <tr>
+          <td>7/11(土) 16:00〜16:30</td><td>佐藤 花子 さん</td><td>事業相談・壁打ち 30分</td><td>💻 オンライン</td>
+          <td><span style="font-size:12px;color:var(--gold)">運営が準備中</span></td>
+          <td><span class="st st-wait">リンク待ち</span></td>
+        </tr>
+        <tr>
+          <td>7/15(水) 20:00〜21:00</td><td>鈴木 一郎 さん</td><td>じっくり相談 60分</td><td>🏢 対面</td>
+          <td><span style="font-size:12px;color:var(--sub)">場所：都内会議室（詳細メール済み）</span></td>
+          <td><span class="st st-navy">確定</span></td>
+        </tr>
+        <tr>
+          <td>7/22(水) 10:00〜10:30</td><td>田中 美咲 さん</td><td>事業相談・壁打ち 30分</td><td>💻 オンライン</td>
+          <td><span style="font-size:12px;color:var(--gold)">運営が準備中</span></td>
+          <td><span class="st st-wait">リンク待ち</span></td>
+        </tr>
+        <tr>
+          <td>7/29(水) 20:00〜20:30</td><td>伊藤 健 さん</td><td>事業相談・壁打ち 30分</td><td>💻 オンライン</td>
+          <td><span style="font-size:12px;color:var(--gold)">運営が準備中</span></td>
+          <td><span class="st st-wait">リンク待ち</span></td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="note note-info" style="margin-top:16px"><b>⏰ リマインド</b> 各対談の前日と当日に、あなたとお相手の双方へ自動でメール通知が送られます。</div>
+  </main>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap foot-in">
+    <div class="foot-brand"><span class="logo-mark">m!</span> まぐまぐストア <span class="demo-tag">デモ</span></div>
+    <nav class="foot-links"><a href="pages.html">📋 全ページ一覧（デモ用）</a></nav>
+    <p class="copyright">© 2026 まぐまぐストア（デモサイト）— 掲載の人物・商品・金額はすべて架空です。</p>
+  </div>
+</footer>
+<script src="assets/common.js"></script>
+</body>
+</html>

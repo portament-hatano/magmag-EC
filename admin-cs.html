@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CS対応管理 | まぐまぐストア 管理</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Zen+Maru+Gothic:wght@700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="admin">
+
+<header class="app-header admin-h">
+  <div class="wrap header-in">
+    <a class="logo" href="admin-home.html"><span class="logo-mark">m!</span> まぐまぐストア <span class="role-badge">運営管理画面</span></a>
+    <div class="app-user">🛡️ 運営：山下 さん<a href="index.html">ストアを見る</a></div>
+  </div>
+</header>
+
+<div class="app-body wrap">
+  <aside class="side-nav">
+    <a href="admin-home.html">🏠 ダッシュボード</a>
+    <a href="admin-approvals.html">✅ 出品承認</a>
+    <a href="admin-refunds.html">💴 返金対応</a>
+    <div class="sep"></div>
+    <a href="admin-sales.html">📊 売上管理</a>
+    <a href="admin-payout.html">🏦 分配管理</a>
+    <a href="admin-creators.html">🎤 クリエイター管理</a>
+    <a href="admin-orders.html">🧾 注文管理</a>
+    <a class="active" href="admin-cs.html">💬 CS対応</a>
+    <div class="sep"></div>
+    <a href="admin-logs.html">🛡️ 操作ログ</a>
+  </aside>
+
+  <main class="app-main">
+    <h1 class="page-title">CS対応管理</h1>
+    <p class="page-desc">問い合わせフォームからの起票と、トラブル記録を管理します。</p>
+
+    <div class="chips" style="margin-bottom:16px">
+      <button class="chip active">未対応（2）</button>
+      <button class="chip">対応中（1）</button>
+      <button class="chip">完了</button>
+      <button class="chip">すべて</button>
+    </div>
+
+    <div class="card" style="overflow:hidden;margin-bottom:20px">
+      <table class="table">
+        <tr><th>受付番号</th><th>種類</th><th>内容（冒頭）</th><th>関連注文</th><th>受付日</th><th>状態</th><th></th></tr>
+        <tr class="tr-hl">
+          <td>CS-2026-0846</td><td>キャンセル・返金</td><td>対談前日ですが返金は間に合いますか…</td><td>MG-2026-004488</td><td>7/2</td>
+          <td><span class="st st-ng">未対応</span></td>
+          <td><button class="btn btn-primary btn-sm" data-demo-submit="（デモ）対応画面を開きます（返信テンプレート付き）">対応する</button></td>
+        </tr>
+        <tr class="tr-hl">
+          <td>CS-2026-0845</td><td>アーカイブの閲覧</td><td>購入したのに「閲覧できません」と表示…</td><td>MG-2026-004401</td><td>7/2</td>
+          <td><span class="st st-ng">未対応</span></td>
+          <td><button class="btn btn-primary btn-sm" data-demo-submit="（デモ）対応画面を開きます">対応する</button></td>
+        </tr>
+        <tr>
+          <td>CS-2026-0841</td><td>対談の予約・日程</td><td>対面の場所は変更できますか…</td><td>MG-2026-004450</td><td>7/1</td>
+          <td><span class="st st-wait">対応中（田島）</span></td>
+          <td><button class="btn btn-ghost btn-sm" data-demo-submit="（デモ）対応履歴を開きます">履歴</button></td>
+        </tr>
+        <tr>
+          <td>CS-2026-0838</td><td>決済</td><td>領収書の宛名を変更したい…</td><td>MG-2026-004512</td><td>6/30</td>
+          <td><span class="st st-ok">完了</span></td>
+          <td><button class="btn btn-ghost btn-sm" data-demo-submit="（デモ）対応履歴を開きます">履歴</button></td>
+        </tr>
+      </table>
+    </div>
+
+    <h2 style="font-size:15px;margin-bottom:10px">⚠️ トラブル記録（対談関連）</h2>
+    <div class="card" style="overflow:hidden">
+      <table class="table">
+        <tr><th>日付</th><th>区分</th><th>内容</th><th>対応</th></tr>
+        <tr><td>6/29</td><td>無断キャンセル</td><td>ユーザーが対談に現れず（クリエイター：三嶋）</td><td><span class="st st-wait">ルール検討中（§4-10）</span></td></tr>
+        <tr><td>6/14</td><td>接続トラブル</td><td>Zoomリンク不達 → 開始10分遅れで実施</td><td><span class="st st-ok">解決・案内フロー改善済み</span></td></tr>
+      </table>
+    </div>
+  </main>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap foot-in">
+    <div class="foot-brand"><span class="logo-mark">m!</span> まぐまぐストア <span class="demo-tag">デモ</span></div>
+    <nav class="foot-links"><a href="pages.html">📋 全ページ一覧（デモ用）</a></nav>
+    <p class="copyright">© 2026 まぐまぐストア（デモサイト）— 掲載の人物・商品・金額はすべて架空です。</p>
+  </div>
+</footer>
+<script src="assets/common.js"></script>
+</body>
+</html>

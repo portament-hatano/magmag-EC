@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>クリエイター情報管理 | まぐまぐストア 管理</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Zen+Maru+Gothic:wght@700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="admin">
+
+<header class="app-header admin-h">
+  <div class="wrap header-in">
+    <a class="logo" href="admin-home.html"><span class="logo-mark">m!</span> まぐまぐストア <span class="role-badge">運営管理画面</span></a>
+    <div class="app-user">🛡️ 運営：山下 さん<a href="index.html">ストアを見る</a></div>
+  </div>
+</header>
+
+<div class="app-body wrap">
+  <aside class="side-nav">
+    <a href="admin-home.html">🏠 ダッシュボード</a>
+    <a href="admin-approvals.html">✅ 出品承認</a>
+    <a href="admin-refunds.html">💴 返金対応</a>
+    <div class="sep"></div>
+    <a href="admin-sales.html">📊 売上管理</a>
+    <a href="admin-payout.html">🏦 分配管理</a>
+    <a class="active" href="admin-creators.html">🎤 クリエイター管理</a>
+    <a href="admin-orders.html">🧾 注文管理</a>
+    <a href="admin-cs.html">💬 CS対応</a>
+    <div class="sep"></div>
+    <a href="admin-logs.html">🛡️ 操作ログ</a>
+  </aside>
+
+  <main class="app-main">
+    <h1 class="page-title">クリエイター情報管理</h1>
+    <p class="page-desc">契約条件・分配率・振込口座の管理と、クリエイター画面への代理ログインができます。</p>
+
+    <div class="note note-danger"><b>🛡️ 代理ログインについて</b> 代理ログイン中の操作は<b>すべて操作ログに記録</b>されます（誰が・いつ・何をしたか）。上場企業グループの内部統制上の必須要件です。→ <a href="admin-logs.html" style="text-decoration:underline">操作ログを見る</a></div>
+
+    <div class="card" style="overflow:hidden">
+      <table class="table">
+        <tr><th>クリエイター</th><th>契約</th><th>分配率</th><th>振込口座</th><th>状態</th><th>操作</th></tr>
+        <tr>
+          <td><span class="avatar av1" style="width:26px;height:26px;font-size:11px">堀</span> <b>堀川 蓮</b><br><span style="font-size:11px;color:var(--sub)">2026/01 契約・出品6件</span></td>
+          <td>標準契約 v2</td><td>70%</td><td>◯◯銀行 ****123</td>
+          <td><span class="st st-ok">稼働中</span></td>
+          <td><a class="btn btn-accent btn-sm" href="creator-home.html?proxy=1" onclick="return confirm('堀川 蓮さんのクリエイター画面に代理ログインします。\n操作はすべて操作ログに記録されます。よろしいですか？')">🛡️ 代理ログイン</a> <button class="btn btn-ghost btn-sm" data-demo-submit="（デモ）契約条件の編集画面を開きます">編集</button></td>
+        </tr>
+        <tr>
+          <td><span class="avatar av2" style="width:26px;height:26px;font-size:11px">早</span> <b>早乙女 香織</b><br><span style="font-size:11px;color:var(--sub)">2026/02 契約・出品4件</span></td>
+          <td>標準契約 v2</td><td>70%</td><td>△△銀行 ****889</td>
+          <td><span class="st st-ok">稼働中</span></td>
+          <td><a class="btn btn-accent btn-sm" href="creator-home.html?proxy=1" onclick="return confirm('早乙女 香織さんのクリエイター画面に代理ログインします。\n操作はすべて操作ログに記録されます。よろしいですか？')">🛡️ 代理ログイン</a> <button class="btn btn-ghost btn-sm" data-demo-submit="（デモ）契約条件の編集画面を開きます">編集</button></td>
+        </tr>
+        <tr>
+          <td><span class="avatar av3" style="width:26px;height:26px;font-size:11px">三</span> <b>三嶋 剛</b><br><span style="font-size:11px;color:var(--sub)">2026/01 契約・出品3件</span></td>
+          <td>個別契約（初期メンバー）</td><td>65%</td><td>◇◇銀行 ****452</td>
+          <td><span class="st st-ok">稼働中</span></td>
+          <td><a class="btn btn-accent btn-sm" href="creator-home.html?proxy=1" onclick="return confirm('三嶋 剛さんのクリエイター画面に代理ログインします。\n操作はすべて操作ログに記録されます。よろしいですか？')">🛡️ 代理ログイン</a> <button class="btn btn-ghost btn-sm" data-demo-submit="（デモ）契約条件の編集画面を開きます">編集</button></td>
+        </tr>
+        <tr>
+          <td><span class="avatar av5" style="width:26px;height:26px;font-size:11px">神</span> <b>神谷 真琴</b><br><span style="font-size:11px;color:var(--sub)">2026/03 契約・出品2件</span></td>
+          <td>標準契約 v2</td><td>70%</td><td><span class="st st-ng">インボイス未登録</span></td>
+          <td><span class="st st-ok">稼働中</span></td>
+          <td><a class="btn btn-accent btn-sm" href="creator-home.html?proxy=1" onclick="return confirm('神谷 真琴さんのクリエイター画面に代理ログインします。\n操作はすべて操作ログに記録されます。よろしいですか？')">🛡️ 代理ログイン</a> <button class="btn btn-ghost btn-sm" data-demo-submit="（デモ）契約条件の編集画面を開きます">編集</button></td>
+        </tr>
+        <tr>
+          <td><span class="avatar av4" style="width:26px;height:26px;font-size:11px">白</span> <b>白石 悠</b><br><span style="font-size:11px;color:var(--sub)">2026/06 契約・出品1件</span></td>
+          <td>標準契約 v2</td><td>70%</td><td>登録手続き中</td>
+          <td><span class="st st-wait">オンボーディング中</span></td>
+          <td><a class="btn btn-accent btn-sm" href="creator-home.html?proxy=1" onclick="return confirm('白石 悠さんのクリエイター画面に代理ログインします。\n操作はすべて操作ログに記録されます。よろしいですか？')">🛡️ 代理ログイン</a> <button class="btn btn-ghost btn-sm" data-demo-submit="（デモ）契約条件の編集画面を開きます">編集</button></td>
+        </tr>
+      </table>
+    </div>
+
+    <p style="margin-top:16px"><button class="btn btn-primary" data-demo-submit="（デモ）新規クリエイターの招待画面を開きます">＋ クリエイターを招待</button></p>
+    <p style="font-size:12.5px;color:var(--sub);margin-top:10px">💡 「代理ログイン」を押すと、実際にクリエイター画面（デモ）に切り替わり、代理操作中バナーが表示されます。会議でのデモにお使いください。</p>
+  </main>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap foot-in">
+    <div class="foot-brand"><span class="logo-mark">m!</span> まぐまぐストア <span class="demo-tag">デモ</span></div>
+    <nav class="foot-links"><a href="pages.html">📋 全ページ一覧（デモ用）</a></nav>
+    <p class="copyright">© 2026 まぐまぐストア（デモサイト）— 掲載の人物・商品・金額はすべて架空です。</p>
+  </div>
+</footer>
+<script src="assets/common.js"></script>
+</body>
+</html>

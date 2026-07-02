@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>日時を選ぶ | まぐまぐストア</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Zen+Maru+Gothic:wght@700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="user">
+
+<header class="site-header">
+  <div class="wrap header-in">
+    <a class="logo" href="index.html"><span class="logo-mark">m!</span> まぐまぐストア</a>
+    <div class="header-actions"><a class="btn btn-ghost btn-sm" href="product-talk.html">← 商品ページに戻る</a></div>
+  </div>
+</header>
+
+<main class="wrap" style="padding-top:26px;padding-bottom:60px">
+  <div class="steps">
+    <div class="step active"><span class="n">1</span>日時の選択</div>
+    <div class="step"><span class="n">2</span>お支払い</div>
+    <div class="step"><span class="n">3</span>予約完了</div>
+  </div>
+
+  <h1 class="page-title">日時を選んでください</h1>
+  <p class="page-desc">堀川 蓮さんが登録した空き時間から選べます。○の枠をクリックしてください。</p>
+
+  <div style="display:flex;gap:26px;align-items:flex-start">
+    <div class="card card-pad" style="flex:1;min-width:0">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px">
+        <button class="btn btn-ghost btn-sm">← 前の週</button>
+        <b>2026年7月6日（月）〜 7月12日（日）</b>
+        <button class="btn btn-ghost btn-sm">次の週 →</button>
+      </div>
+      <div class="cal">
+        <div class="cal-h"></div>
+        <div class="cal-h">月<br><span class="d">6</span></div>
+        <div class="cal-h">火<br><span class="d">7</span></div>
+        <div class="cal-h">水<br><span class="d">8</span></div>
+        <div class="cal-h">木<br><span class="d">9</span></div>
+        <div class="cal-h">金<br><span class="d">10</span></div>
+        <div class="cal-h" style="color:var(--navy)">土<br><span class="d">11</span></div>
+        <div class="cal-h" style="color:var(--red)">日<br><span class="d">12</span></div>
+
+        <div class="cal-t">10:00</div>
+        <div class="slot slot-off">×</div><div class="slot" data-label="7月7日(火) 10:00〜10:30">○</div><div class="slot slot-off">×</div><div class="slot" data-label="7月9日(木) 10:00〜10:30">○</div><div class="slot slot-off">×</div><div class="slot slot-off">×</div><div class="slot slot-off">×</div>
+        <div class="cal-t">13:00</div>
+        <div class="slot slot-off">×</div><div class="slot slot-off">×</div><div class="slot" data-label="7月8日(水) 13:00〜13:30">○</div><div class="slot slot-off">×</div><div class="slot" data-label="7月10日(金) 13:00〜13:30">○</div><div class="slot" data-label="7月11日(土) 13:00〜13:30">○</div><div class="slot slot-off">×</div>
+        <div class="cal-t">16:00</div>
+        <div class="slot" data-label="7月6日(月) 16:00〜16:30">○</div><div class="slot slot-off">×</div><div class="slot" data-label="7月8日(水) 16:00〜16:30">○</div><div class="slot slot-off">×</div><div class="slot slot-off">×</div><div class="slot" data-label="7月11日(土) 16:00〜16:30">○</div><div class="slot slot-off">×</div>
+        <div class="cal-t">20:00</div>
+        <div class="slot" data-label="7月6日(月) 20:00〜20:30">○</div><div class="slot" data-label="7月7日(火) 20:00〜20:30">○</div><div class="slot slot-off">×</div><div class="slot" data-label="7月9日(木) 20:00〜20:30">○</div><div class="slot slot-off">×</div><div class="slot slot-off">×</div><div class="slot slot-off">×</div>
+      </div>
+      <p class="form-hint" style="margin-top:12px">※ 空き時間はクリエイター本人が手動で登録しています（カレンダーツール連携なし・決定済み方針）</p>
+    </div>
+
+    <aside style="width:320px;flex-shrink:0">
+      <div class="card card-pad">
+        <p style="font-size:12px;color:var(--sub)">ご予約の内容</p>
+        <b style="font-size:15px">事業相談・壁打ち 30分対談</b>
+        <p style="font-size:13px;color:var(--sub);margin:2px 0 12px">堀川 蓮</p>
+        <div style="background:var(--soft);border-radius:10px;padding:12px 14px;font-size:13.5px;margin-bottom:14px">
+          選択中の日時：<b id="picked-slot">未選択</b>
+        </div>
+        <div class="field">
+          <label>形式を選択</label>
+          <div class="radio-row">
+            <label class="radio-card"><input type="radio" name="fmt" checked>💻 オンライン</label>
+            <label class="radio-card"><input type="radio" name="fmt" disabled>🏢 対面（この商品は対象外）</label>
+          </div>
+        </div>
+        <p style="font-size:20px;font-weight:900;margin-bottom:12px">合計 ¥33,000 <span style="font-size:11px;font-weight:500;color:var(--sub)">（税込）</span></p>
+        <a id="go-next" class="btn btn-accent btn-block btn-ghost" href="checkout.html">お支払いへ進む →</a>
+        <p class="form-hint" style="text-align:center;margin-top:8px">この時点ではまだ確定しません</p>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap foot-in">
+    <div class="foot-brand"><span class="logo-mark">m!</span> まぐまぐストア <span class="demo-tag">デモ</span></div>
+    <nav class="foot-links">
+      <a href="terms.html">利用規約</a>
+      <a href="contact.html">お問い合わせ</a>
+      <a href="pages.html">📋 全ページ一覧（デモ用）</a>
+    </nav>
+    <p class="copyright">© 2026 まぐまぐストア（デモサイト）— 掲載の人物・商品・金額はすべて架空です。</p>
+  </div>
+</footer>
+<script src="assets/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>全ページ一覧（会議用） | まぐまぐストア デモ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Zen+Maru+Gothic:wght@700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="user">
+
+<div class="dir-hero">
+  <div class="wrap">
+    <h1><span class="logo-mark" style="width:44px;height:44px;font-size:22px;vertical-align:-10px">m!</span> まぐまぐストア デモサイト</h1>
+    <p>初期リリース要件定義（全36機能・9カテゴリー）にもとづく画面デモ ── 全26ページ<br>このページから各画面に移動できます（会議用インデックス）</p>
+  </div>
+</div>
+
+<main class="wrap" style="padding-bottom:60px">
+
+  <div class="note note-info" style="margin-top:26px"><b>💡 デモの見どころ</b> ①商品購入の流れ：<a href="product-talk.html" style="text-decoration:underline">商品詳細</a> → 予約 → 決済 → 完了　②<a href="admin-creators.html" style="text-decoration:underline">クリエイター管理</a>の「代理ログイン」を押すと、操作ログに記録される代理操作モードを体験できます　③各画面の黄色い付箋は「検討中の論点（§4）」の該当箇所です</div>
+
+  <section class="dir-sec">
+    <h2>🛍️ ユーザー画面：閲覧・購入 <span class="cnt">8ページ</span></h2>
+    <div class="dir-grid">
+      <a class="dir-card" href="index.html"><b>トップページ</b><span>サービス紹介・人気クリエイター・新着商品</span><span class="fn">集客の入口</span></a>
+      <a class="dir-card" href="products.html"><b>商品一覧・検索</b><span>対談権／アーカイブの絞り込み、クリエイター別表示、並び替え</span><span class="fn">機能D：商品一覧・検索</span></a>
+      <a class="dir-card" href="product-talk.html"><b>商品詳細（対談権）</b><span>クリエイター紹介・価格・形式・SNSシェア</span><span class="fn">機能D：商品詳細</span></a>
+      <a class="dir-card" href="product-archive.html"><b>商品詳細（アーカイブ）</b><span>収録内容と「立ち読み」プレビュー付き</span><span class="fn">機能D：プレビュー</span></a>
+      <a class="dir-card" href="reserve.html"><b>日時選択・予約</b><span>クリエイターの空き枠カレンダーから選択（クリックで選べます）</span><span class="fn">機能F：日時選択・予約</span></a>
+      <a class="dir-card" href="checkout.html"><b>決済（クレジットカード）</b><span>注文内容の確認とカード入力。決済代行は未選定（論点1）</span><span class="fn">機能E：決済</span></a>
+      <a class="dir-card" href="complete.html"><b>購入完了</b><span>確認メール自動送信の案内＋SNSシェア導線</span><span class="fn">機能E/I：完了通知・シェア</span></a>
+      <a class="dir-card" href="login.html"><b>ログイン / 会員登録</b><span>まぐまぐ既存IDとの連携を想定（論点9）</span><span class="fn">機能A：会員登録・ログイン</span></a>
+    </div>
+  </section>
+
+  <section class="dir-sec">
+    <h2>👤 ユーザー画面：マイページ・購入後 <span class="cnt">7ページ</span></h2>
+    <div class="dir-grid">
+      <a class="dir-card" href="mypage.html"><b>マイページ</b><span>予約状況・購入履歴・退会の入口。リマインド通知の案内も</span><span class="fn">機能A：マイページ・退会</span></a>
+      <a class="dir-card" href="library.html"><b>購入済みコンテンツ一覧</b><span>買ったアーカイブと読了状況</span><span class="fn">機能G：購入済み一覧</span></a>
+      <a class="dir-card" href="viewer.html"><b>閲覧ビューア</b><span>Web閲覧＋購入者透かし（転載対策は論点5）</span><span class="fn">機能G：閲覧ビューア</span></a>
+      <a class="dir-card" href="receipt.html"><b>領収書発行</b><span>宛名を入れて印刷／PDF保存（実際に動きます）</span><span class="fn">機能A：領収書発行</span></a>
+      <a class="dir-card" href="cancel.html"><b>キャンセル申請</b><span>理由（クリエイター都合／ユーザー都合）を選んで申請 → 運営承認の半自動フロー</span><span class="fn">機能E：キャンセル申請</span></a>
+      <a class="dir-card" href="contact.html"><b>問い合わせフォーム</b><span>CS対応の入口。管理画面に起票される想定</span><span class="fn">機能I：問い合わせ</span></a>
+      <a class="dir-card" href="terms.html"><b>規約・特商法表記</b><span>利用規約／プライバシーポリシー／特商法（枠と導線・文面は法務）</span><span class="fn">機能I：法的必須ページ</span></a>
+    </div>
+  </section>
+
+  <section class="dir-sec">
+    <h2>🎤 クリエイター画面 <span class="cnt">7ページ</span></h2>
+    <div class="dir-grid">
+      <a class="dir-card" href="creator-home.html"><b>ダッシュボード</b><span>売上・予約・承認待ちのサマリーと運営からのお知らせ</span><span class="fn">機能B：クリエイターアカウント</span></a>
+      <a class="dir-card" href="creator-profile.html"><b>プロフィール編集</b><span>紹介文・写真。商品詳細ページに反映</span><span class="fn">機能B：プロフィール編集</span></a>
+      <a class="dir-card" href="creator-items.html"><b>出品管理（親機能）</b><span>公開・非公開の切替（非公開＝即時／公開＝承認後の非対称ルール）</span><span class="fn">機能B：出品・公開切替</span></a>
+      <a class="dir-card" href="creator-item-archive.html"><b>バックナンバー登録</b><span>収録範囲・価格・立ち読み範囲を設定 → 承認待ちへ</span><span class="fn">機能B：バックナンバー登録</span></a>
+      <a class="dir-card" href="creator-item-talk.html"><b>対談権の登録＋空き時間</b><span>価格・時間・形式の設定と、空き時間の手入力（カレンダー連携なし）</span><span class="fn">機能B：対談権・空き時間登録</span></a>
+      <a class="dir-card" href="creator-bookings.html"><b>予約確認</b><span>日時・相手・形式の一覧。運営登録のZoomリンクも表示</span><span class="fn">機能B：予約確認</span></a>
+      <a class="dir-card" href="creator-sales.html"><b>売上・分配確認</b><span>月次売上と自分の取り分（70%）・振込予定</span><span class="fn">機能B：売上・分配確認</span></a>
+    </div>
+  </section>
+
+  <section class="dir-sec">
+    <h2>🛡️ 運営管理画面（社内向け） <span class="cnt">9ページ</span></h2>
+    <div class="dir-grid">
+      <a class="dir-card" href="admin-home.html"><b>運営ダッシュボード</b><span>承認待ち・返金申請・対談リンク登録などの「今日やること」</span><span class="fn">機能H：運営の司令塔</span></a>
+      <a class="dir-card" href="admin-approvals.html"><b>出品承認</b><span>新規出品・公開申請を審査（価格と内容の両方が対象）</span><span class="fn">機能H：出品承認</span></a>
+      <a class="dir-card" href="admin-refunds.html"><b>返金の承認・実行</b><span>申請→運営承認→返金実行の半自動フロー</span><span class="fn">機能E：返金（運営側）</span></a>
+      <a class="dir-card" href="admin-sales.html"><b>売上管理</b><span>クリエイター別・商品別のタブ切替＋推移グラフ</span><span class="fn">機能H：売上管理</span></a>
+      <a class="dir-card" href="admin-payout.html"><b>分配管理</b><span>レベニューシェア計算・支払管理・インボイス対応</span><span class="fn">機能H：分配管理</span></a>
+      <a class="dir-card" href="admin-creators.html"><b>クリエイター情報管理</b><span>契約条件・分配率・口座 ＋ 代理ログインの起点 ★デモの見どころ</span><span class="fn">機能C/H：代理ログイン</span></a>
+      <a class="dir-card" href="admin-orders.html"><b>ユーザー・注文管理</b><span>注文検索・ステータス確認・対談リンク（Zoom）の登録</span><span class="fn">機能H/F：注文・対談サポート</span></a>
+      <a class="dir-card" href="admin-cs.html"><b>CS対応管理</b><span>問い合わせの起票・トラブル記録</span><span class="fn">機能H：CS対応</span></a>
+      <a class="dir-card" href="admin-logs.html"><b>操作ログ</b><span>代理操作の記録（誰が・いつ・何を）。内部統制の必須要件</span><span class="fn">機能C：操作ログ</span></a>
+    </div>
+  </section>
+
+  <section class="dir-sec">
+    <h2>🔖 このデモに埋め込んだ「検討中の論点」 <span class="cnt">要件定義 §4</span></h2>
+    <div class="card card-pad" style="font-size:13.5px">
+      <p>要件定義で「実装前に発注側へ確認」とされている10論点は、該当ページに黄色い付箋（🔖）として表示しています。会議で該当画面を開きながら確認できます。</p>
+      <p style="margin-top:8px;color:var(--sub)">①決済代行 → <a href="checkout.html" style="text-decoration:underline">決済</a>　②対談ツール → <a href="admin-orders.html" style="text-decoration:underline">注文管理</a>　③審査基準・日数 → <a href="admin-approvals.html" style="text-decoration:underline">出品承認</a>　④返金基準 → <a href="cancel.html" style="text-decoration:underline">キャンセル申請</a>　⑤DL可否・転載対策 → <a href="viewer.html" style="text-decoration:underline">ビューア</a>　⑥支払サイクル・⑦インボイス → <a href="admin-payout.html" style="text-decoration:underline">分配管理</a>　⑧退会後の扱い → <a href="mypage.html#taikai" style="text-decoration:underline">マイページ</a>　⑨ID連携方式 → <a href="login.html" style="text-decoration:underline">ログイン</a>　⑩無断キャンセル → <a href="admin-cs.html" style="text-decoration:underline">CS対応</a></p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap foot-in">
+    <div class="foot-brand"><span class="logo-mark">m!</span> まぐまぐストア <span class="demo-tag">デモ</span></div>
+    <p class="copyright">© 2026 まぐまぐストア（デモサイト）— 掲載の人物・商品・金額・数値はすべて架空です。</p>
+  </div>
+</footer>
+</body>
+</html>

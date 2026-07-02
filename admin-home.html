@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>運営ダッシュボード | まぐまぐストア 管理</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Zen+Maru+Gothic:wght@700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="admin">
+
+<header class="app-header admin-h">
+  <div class="wrap header-in">
+    <a class="logo" href="admin-home.html"><span class="logo-mark">m!</span> まぐまぐストア <span class="role-badge">運営管理画面</span></a>
+    <div class="app-user">🛡️ 運営：山下 さん<a href="index.html">ストアを見る</a></div>
+  </div>
+</header>
+
+<div class="app-body wrap">
+  <aside class="side-nav">
+    <a class="active" href="admin-home.html">🏠 ダッシュボード</a>
+    <a href="admin-approvals.html">✅ 出品承認 <span class="st st-wait" style="margin-left:auto">3</span></a>
+    <a href="admin-refunds.html">💴 返金対応 <span class="st st-ng" style="margin-left:auto">2</span></a>
+    <div class="sep"></div>
+    <a href="admin-sales.html">📊 売上管理</a>
+    <a href="admin-payout.html">🏦 分配管理</a>
+    <a href="admin-creators.html">🎤 クリエイター管理</a>
+    <a href="admin-orders.html">🧾 注文管理</a>
+    <a href="admin-cs.html">💬 CS対応</a>
+    <div class="sep"></div>
+    <a href="admin-logs.html">🛡️ 操作ログ</a>
+  </aside>
+
+  <main class="app-main">
+    <h1 class="page-title">運営ダッシュボード</h1>
+    <p class="page-desc">2026年7月3日（金）のストア状況です。</p>
+
+    <div class="stats">
+      <div class="stat"><p class="lbl">出品承認 待ち</p><p class="num" style="color:var(--gold)">3<small> 件</small></p><p class="diff" style="color:var(--gold)">最古 7/1 申請</p></div>
+      <div class="stat"><p class="lbl">返金申請 未対応</p><p class="num" style="color:var(--red)">2<small> 件</small></p></div>
+      <div class="stat"><p class="lbl">今月の流通額</p><p class="num">¥2,148,000</p><p class="diff">▲ 前月比 +23%</p></div>
+      <div class="stat"><p class="lbl">対談リンク 未登録</p><p class="num">3<small> 件</small></p><p class="diff" style="color:var(--sub)">直近対談 7/8</p></div>
+    </div>
+
+    <h2 style="font-size:16px;margin-bottom:12px">📌 今日やること</h2>
+    <div class="card" style="overflow:hidden;margin-bottom:24px">
+      <table class="table">
+        <tr><td>✅ 出品審査：「起業の現場から 7月号」ほか2件</td><td style="width:120px"><a class="btn btn-primary btn-sm" href="admin-approvals.html">審査する</a></td></tr>
+        <tr><td>💴 返金申請の確認：2件（ユーザー都合1・クリエイター都合1）</td><td><a class="btn btn-primary btn-sm" href="admin-refunds.html">確認する</a></td></tr>
+        <tr><td>🔗 7/11・7/22・7/29 の対談リンク（Zoom）登録</td><td><a class="btn btn-primary btn-sm" href="admin-orders.html">登録する</a></td></tr>
+      </table>
+    </div>
+
+    <h2 style="font-size:16px;margin-bottom:12px">🕐 最近の動き</h2>
+    <div class="card card-pad" style="font-size:13.5px">
+      <p style="border-bottom:1px solid var(--line);padding-bottom:8px;margin-bottom:8px"><b>10:42</b>　山田太郎さんが対談権を購入（¥33,000 / 堀川 蓮）→ 確認メール自動送信済み</p>
+      <p style="border-bottom:1px solid var(--line);padding-bottom:8px;margin-bottom:8px"><b>09:15</b>　早乙女香織さんがバックナンバーの公開を申請 → <a href="admin-approvals.html" style="text-decoration:underline;color:var(--navy)">承認キューへ</a></p>
+      <p><b>08:30</b>　運営・田島が神谷真琴さんのアカウントに代理ログイン → <a href="admin-logs.html" style="text-decoration:underline;color:var(--navy)">操作ログに記録</a></p>
+    </div>
+  </main>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap foot-in">
+    <div class="foot-brand"><span class="logo-mark">m!</span> まぐまぐストア <span class="demo-tag">デモ</span></div>
+    <nav class="foot-links"><a href="pages.html">📋 全ページ一覧（デモ用）</a></nav>
+    <p class="copyright">© 2026 まぐまぐストア（デモサイト）— 掲載の人物・商品・金額はすべて架空です。</p>
+  </div>
+</footer>
+<script src="assets/common.js"></script>
+</body>
+</html>

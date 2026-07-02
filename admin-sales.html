@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>売上管理 | まぐまぐストア 管理</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Zen+Maru+Gothic:wght@700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="admin">
+
+<header class="app-header admin-h">
+  <div class="wrap header-in">
+    <a class="logo" href="admin-home.html"><span class="logo-mark">m!</span> まぐまぐストア <span class="role-badge">運営管理画面</span></a>
+    <div class="app-user">🛡️ 運営：山下 さん<a href="index.html">ストアを見る</a></div>
+  </div>
+</header>
+
+<div class="app-body wrap tabs-wrap">
+  <aside class="side-nav">
+    <a href="admin-home.html">🏠 ダッシュボード</a>
+    <a href="admin-approvals.html">✅ 出品承認</a>
+    <a href="admin-refunds.html">💴 返金対応</a>
+    <div class="sep"></div>
+    <a class="active" href="admin-sales.html">📊 売上管理</a>
+    <a href="admin-payout.html">🏦 分配管理</a>
+    <a href="admin-creators.html">🎤 クリエイター管理</a>
+    <a href="admin-orders.html">🧾 注文管理</a>
+    <a href="admin-cs.html">💬 CS対応</a>
+    <div class="sep"></div>
+    <a href="admin-logs.html">🛡️ 操作ログ</a>
+  </aside>
+
+  <main class="app-main">
+    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
+      <div>
+        <h1 class="page-title">売上管理</h1>
+        <p class="page-desc">ストア全体の売上を、クリエイター別・商品別に確認できます。</p>
+      </div>
+      <select class="in" style="width:auto"><option>2026年6月</option><option>2026年5月</option></select>
+    </div>
+
+    <div class="stats" style="grid-template-columns:repeat(3,1fr)">
+      <div class="stat"><p class="lbl">6月の総流通額</p><p class="num">¥1,745,300</p><p class="diff">▲ 前月比 +21%</p></div>
+      <div class="stat"><p class="lbl">内訳：対談権</p><p class="num">¥1,116,500</p><p class="diff" style="color:var(--sub)">38件</p></div>
+      <div class="stat"><p class="lbl">内訳：アーカイブ</p><p class="num">¥628,800</p><p class="diff" style="color:var(--sub)">412件</p></div>
+    </div>
+
+    <div class="card card-pad" style="padding-bottom:44px;margin-bottom:24px">
+      <p style="font-size:13px;font-weight:700;margin-bottom:6px">月別の流通額推移</p>
+      <div class="bars">
+        <div class="bar" style="height:35%"><em>¥68万</em><span>1月</span></div>
+        <div class="bar" style="height:48%"><em>¥93万</em><span>2月</span></div>
+        <div class="bar" style="height:44%"><em>¥85万</em><span>3月</span></div>
+        <div class="bar" style="height:64%"><em>¥124万</em><span>4月</span></div>
+        <div class="bar" style="height:74%"><em>¥144万</em><span>5月</span></div>
+        <div class="bar hl" style="height:90%"><em>¥174万</em><span>6月</span></div>
+      </div>
+    </div>
+
+    <div class="tabs">
+      <button data-tab="byCreator" class="active">クリエイター別</button>
+      <button data-tab="byItem">商品別</button>
+    </div>
+
+    <div id="byCreator" class="tab-panel active card" style="overflow:hidden">
+      <table class="table">
+        <tr><th>クリエイター</th><th class="num">対談権</th><th class="num">アーカイブ</th><th class="num">合計売上</th><th class="num">分配額</th></tr>
+        <tr><td><span class="avatar av1" style="width:24px;height:24px;font-size:10px">堀</span> 堀川 蓮</td><td class="num">¥462,000</td><td class="num">¥127,600</td><td class="num"><b>¥589,600</b></td><td class="num">¥412,720（70%）</td></tr>
+        <tr><td><span class="avatar av2" style="width:24px;height:24px;font-size:10px">早</span> 早乙女 香織</td><td class="num">¥275,000</td><td class="num">¥192,500</td><td class="num"><b>¥467,500</b></td><td class="num">¥327,250（70%）</td></tr>
+        <tr><td><span class="avatar av3" style="width:24px;height:24px;font-size:10px">三</span> 三嶋 剛</td><td class="num">¥198,000</td><td class="num">¥140,800</td><td class="num"><b>¥338,800</b></td><td class="num">¥220,220（65%）</td></tr>
+        <tr><td><span class="avatar av5" style="width:24px;height:24px;font-size:10px">神</span> 神谷 真琴</td><td class="num">¥181,500</td><td class="num">¥55,400</td><td class="num"><b>¥236,900</b></td><td class="num">¥165,830（70%）</td></tr>
+        <tr><td><span class="avatar av6" style="width:24px;height:24px;font-size:10px">大</span> 大森 一樹</td><td class="num">¥0</td><td class="num">¥112,500</td><td class="num"><b>¥112,500</b></td><td class="num">¥78,750（70%）</td></tr>
+      </table>
+    </div>
+
+    <div id="byItem" class="tab-panel card" style="overflow:hidden">
+      <table class="table">
+        <tr><th>商品</th><th>クリエイター</th><th class="num">販売数</th><th class="num">売上</th></tr>
+        <tr><td>事業相談・壁打ち 30分対談</td><td>堀川 蓮</td><td class="num">9</td><td class="num">¥297,000</td></tr>
+        <tr><td>マーケ戦略まるごと相談 45分</td><td>早乙女 香織</td><td class="num">10</td><td class="num">¥275,000</td></tr>
+        <tr><td>じっくり相談 60分対談</td><td>堀川 蓮</td><td class="num">3</td><td class="num">¥165,000</td></tr>
+        <tr><td>売れる仕組み研究室 上半期セット</td><td>早乙女 香織</td><td class="num">35</td><td class="num">¥192,500</td></tr>
+        <tr><td>AI経営メモ 6月号</td><td>大森 一樹</td><td class="num">68</td><td class="num">¥112,200</td></tr>
+      </table>
+    </div>
+
+    <p style="margin-top:14px"><button class="btn btn-ghost btn-sm" data-demo-submit="（デモ）CSVをダウンロードします">⬇ CSVダウンロード</button></p>
+  </main>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap foot-in">
+    <div class="foot-brand"><span class="logo-mark">m!</span> まぐまぐストア <span class="demo-tag">デモ</span></div>
+    <nav class="foot-links"><a href="pages.html">📋 全ページ一覧（デモ用）</a></nav>
+    <p class="copyright">© 2026 まぐまぐストア（デモサイト）— 掲載の人物・商品・金額はすべて架空です。</p>
+  </div>
+</footer>
+<script src="assets/common.js"></script>
+</body>
+</html>

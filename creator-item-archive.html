@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>バックナンバー登録 | まぐまぐストア クリエイター</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Zen+Maru+Gothic:wght@700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="creator">
+
+<header class="app-header creator-h">
+  <div class="wrap header-in">
+    <a class="logo" href="creator-home.html"><span class="logo-mark">m!</span> まぐまぐストア <span class="role-badge">クリエイター画面</span></a>
+    <div class="app-user">🎤 堀川 蓮 さん<a href="index.html">ストアを見る</a></div>
+  </div>
+</header>
+
+<div class="app-body wrap">
+  <aside class="side-nav">
+    <a href="creator-home.html">🏠 ダッシュボード</a>
+    <a href="creator-profile.html">👤 プロフィール編集</a>
+    <a class="active" href="creator-items.html">📦 出品管理</a>
+    <a href="creator-bookings.html">📅 予約確認</a>
+    <a href="creator-sales.html">💰 売上・分配</a>
+  </aside>
+
+  <main class="app-main">
+    <p style="font-size:12px;color:var(--faint);margin-bottom:10px"><a href="creator-items.html">出品管理</a> › バックナンバー登録</p>
+    <h1 class="page-title">📚 バックナンバーを出品する</h1>
+    <p class="page-desc">登録後は運営の審査（価格と内容）を経て公開されます。</p>
+
+    <div class="card card-pad" style="max-width:680px">
+      <div class="field">
+        <label>対象のメルマガ<span class="req">必須</span></label>
+        <select class="in"><option>起業の現場から（読者数 3.2万人）</option></select>
+      </div>
+      <div class="field">
+        <label>商品タイトル<span class="req">必須</span></label>
+        <input class="in" placeholder="例：起業の現場から 2026年7月号（全9通）">
+      </div>
+      <div class="field">
+        <label>収録する配信の範囲<span class="req">必須</span></label>
+        <div style="display:flex;gap:10px;align-items:center">
+          <input class="in" type="date" value="2026-07-01" style="width:auto">〜
+          <input class="in" type="date" value="2026-07-31" style="width:auto">
+          <span class="st st-navy">9通が対象</span>
+        </div>
+      </div>
+      <div class="field">
+        <label>価格（税込）<span class="req">必須</span></label>
+        <input class="in" value="1,650" style="width:160px"> <span style="font-size:13px">円</span>
+      </div>
+      <div class="field">
+        <label>商品説明<span class="req">必須</span></label>
+        <textarea class="in" placeholder="どんな内容か、誰におすすめかを書くと売れやすくなります"></textarea>
+      </div>
+      <div class="field">
+        <label>立ち読み（プレビュー）の範囲</label>
+        <select class="in" style="width:auto"><option>第1通の冒頭 800字（おすすめ）</option><option>第1通の全文</option><option>プレビューなし</option></select>
+        <p class="form-hint">購入前のユーザーが「立ち読み」できる範囲です</p>
+      </div>
+      <div class="note"><b>📋 このあとの流れ</b> 登録 → <b>運営の審査（価格・内容）</b> → 承認されると公開されます。審査中は「承認待ち」と表示されます。</div>
+      <button class="btn btn-accent" data-demo-submit="（デモ）登録しました。運営の承認後に公開されます（状態：承認待ち）。" data-demo-next="creator-items.html">登録して審査に出す</button>
+      <button class="btn btn-ghost" data-demo-submit="（デモ）下書きとして保存しました。" style="margin-left:8px">下書き保存</button>
+    </div>
+  </main>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap foot-in">
+    <div class="foot-brand"><span class="logo-mark">m!</span> まぐまぐストア <span class="demo-tag">デモ</span></div>
+    <nav class="foot-links"><a href="pages.html">📋 全ページ一覧（デモ用）</a></nav>
+    <p class="copyright">© 2026 まぐまぐストア（デモサイト）— 掲載の人物・商品・金額はすべて架空です。</p>
+  </div>
+</footer>
+<script src="assets/common.js"></script>
+</body>
+</html>
