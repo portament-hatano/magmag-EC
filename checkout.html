@@ -18,7 +18,7 @@
 </header>
 
 <main class="wrap" style="padding-top:26px;padding-bottom:60px;max-width:900px">
-  <div class="steps">
+  <div class="steps" id="steps">
     <div class="step done"><span class="n">✓</span>日時の選択</div>
     <div class="step active"><span class="n">2</span>お支払い</div>
     <div class="step"><span class="n">3</span>予約完了</div>
@@ -52,23 +52,23 @@
       <label style="display:flex;gap:8px;font-size:13px;align-items:flex-start;margin:14px 0">
         <input type="checkbox" style="margin-top:4px"> <span><a href="terms.html" style="text-decoration:underline">利用規約</a>と<a href="terms.html" style="text-decoration:underline">キャンセル・返金の規定</a>に同意します</span>
       </label>
-      <button class="btn btn-accent btn-lg btn-block" data-demo-submit="（デモ）決済が完了しました。確認メールを送信します。" data-demo-next="complete.html">¥33,000 を支払って予約を確定する</button>
+      <button class="btn btn-accent btn-lg btn-block" id="pay-btn" data-demo-submit="（デモ）決済が完了しました。確認メールを送信します。" data-demo-next="complete.html"></button>
     </div>
 
     <aside style="width:300px;flex-shrink:0">
       <div class="card card-pad">
         <p style="font-size:12px;color:var(--sub)">ご注文内容</p>
-        <b style="font-size:14.5px">事業相談・壁打ち 30分対談</b>
-        <p style="font-size:12.5px;color:var(--sub)">堀川 蓮</p>
+        <b style="font-size:14.5px" id="o-title"></b>
+        <p style="font-size:12.5px;color:var(--sub)"><span id="o-creator" class="c-jump"></span></p>
         <table style="width:100%;font-size:13px;margin-top:12px">
-          <tr><td style="padding:4px 0">日時</td><td style="text-align:right"><b>7月8日(水) 13:00〜13:30</b></td></tr>
-          <tr><td style="padding:4px 0">形式</td><td style="text-align:right">オンライン</td></tr>
-          <tr><td style="padding:4px 0">商品代金</td><td style="text-align:right">¥30,000</td></tr>
-          <tr><td style="padding:4px 0">消費税</td><td style="text-align:right">¥3,000</td></tr>
-          <tr><td style="padding:8px 0;border-top:1px solid var(--line)"><b>合計</b></td><td style="text-align:right;border-top:1px solid var(--line)"><b style="font-size:18px">¥33,000</b></td></tr>
+          <tr id="o-when"><td style="padding:4px 0">日時</td><td style="text-align:right"><b>7月8日(水) 13:00〜</b></td></tr>
+          <tr id="o-fmt"><td style="padding:4px 0">形式</td><td style="text-align:right">オンライン</td></tr>
+          <tr><td style="padding:4px 0">商品代金</td><td style="text-align:right" id="o-base"></td></tr>
+          <tr><td style="padding:4px 0">消費税</td><td style="text-align:right" id="o-tax"></td></tr>
+          <tr><td style="padding:8px 0;border-top:1px solid var(--line)"><b>合計</b></td><td style="text-align:right;border-top:1px solid var(--line)"><b style="font-size:18px" id="o-total"></b></td></tr>
         </table>
       </div>
-      <div class="note note-info" style="font-size:12px"><b>📧 購入後の流れ</b><br>①購入確認メールが自動送信 → ②運営が対談リンクを登録し双方へ案内 → ③前日・当日にリマインドメール</div>
+      <div class="note note-info" style="font-size:12px" id="flow-note"></div>
     </aside>
   </div>
 </main>
@@ -84,6 +84,36 @@
     <p class="copyright">© 2026 まぐまぐストア（デモサイト）— 掲載の人物・商品・金額はすべて架空です。</p>
   </div>
 </footer>
+<script src="assets/data.js"></script>
+<script>
+(function () {
+  var pid = new URLSearchParams(location.search).get("p") || "t-horikawa30";
+  var p = MG.products[pid];
+  if (!p) { pid = "t-horikawa30"; p = MG.products[pid]; }
+  var c = MG.creators[p.c];
+  var yen = function (n) { return "¥" + n.toLocaleString("ja-JP"); };
+  var base = Math.round(p.price / 1.1);
+  document.getElementById("o-title").textContent = p.title;
+  var cn = document.getElementById("o-creator");
+  cn.textContent = c.name;
+  cn.dataset.c = p.c;
+  document.getElementById("o-base").textContent = yen(base);
+  document.getElementById("o-tax").textContent = yen(p.price - base);
+  document.getElementById("o-total").textContent = yen(p.price);
+  var btn = document.getElementById("pay-btn");
+  btn.dataset.demoNext = "complete.html?p=" + pid;
+  if (p.type === "talk") {
+    btn.textContent = yen(p.price) + " を支払って予約を確定する";
+    document.getElementById("flow-note").innerHTML = "<b>📧 購入後の流れ</b><br>①購入確認メールが自動送信 → ②運営が対談リンクを登録し双方へ案内 → ③前日・当日にリマインドメール";
+  } else {
+    btn.textContent = yen(p.price) + " を支払って購入する";
+    document.getElementById("steps").style.display = "none";
+    document.getElementById("o-when").style.display = "none";
+    document.getElementById("o-fmt").style.display = "none";
+    document.getElementById("flow-note").innerHTML = "<b>📧 購入後の流れ</b><br>購入確認メールが届き、すぐに「購入済みコンテンツ」から全文をお読みいただけます。";
+  }
+})();
+</script>
 <script src="assets/common.js"></script>
 </body>
 </html>

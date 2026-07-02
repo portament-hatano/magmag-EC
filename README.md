@@ -8,11 +8,11 @@
 - **会議用の全ページ一覧**: [pages.html](pages.html) ← まずここ
 - GitHub Pages: https://portament-hatano.github.io/magmag-EC/pages.html
 
-## 構成（全26ページ）
+## 構成（全27ページ）
 
 | 区分 | ページ |
 |---|---|
-| ユーザー（購入前） | index / products / product-talk / product-archive / reserve / checkout / complete / login |
+| ユーザー（購入前） | index / products / creator（クリエイター本人ページ）/ product-talk / product-archive / reserve / checkout / complete / login |
 | ユーザー（購入後） | mypage / library / viewer / receipt / cancel / contact / terms |
 | クリエイター | creator-home / creator-profile / creator-items / creator-item-archive / creator-item-talk / creator-bookings / creator-sales |
 | 運営管理 | admin-home / admin-approvals / admin-refunds / admin-sales / admin-payout / admin-creators / admin-orders / admin-cs / admin-logs |

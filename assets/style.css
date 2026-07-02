@@ -107,6 +107,10 @@ ul{list-style:none}
 .av1{background:#274690}.av2{background:#f0664a}.av3{background:#2f9e6e}
 .av4{background:#7b5cd6}.av5{background:#1f9e9e}.av6{background:#d99a2b}
 
+/* 人名リンク（クリックでクリエイターページへ） */
+.c-jump{text-decoration:underline;text-underline-offset:2px;cursor:pointer}
+.c-jump:hover{color:var(--navy)}
+
 /* クリエイターカード */
 .c-card{text-align:center;padding:26px 18px;display:flex;flex-direction:column;align-items:center;gap:8px}
 .c-card b{font-size:15px}

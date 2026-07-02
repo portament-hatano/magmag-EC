@@ -16,6 +16,15 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  // ---- 人名クリックでクリエイターページへ（商品カード内でも使えるようにリンクと分離） ----
+  document.querySelectorAll('.c-jump').forEach(function (el) {
+    el.addEventListener('click', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      location.href = 'creator.html?c=' + el.dataset.c;
+    });
+  });
+
   // ---- タブ切替 ----
   document.querySelectorAll('[data-tab]').forEach(function (btn) {
     btn.addEventListener('click', function () {

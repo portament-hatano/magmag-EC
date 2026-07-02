@@ -26,18 +26,22 @@
 
 <main class="wrap" style="padding-top:34px;padding-bottom:60px">
   <h1 class="page-title">商品をさがす</h1>
-  <p class="page-desc">対談権・アーカイブの絞り込みや、クリエイター別の表示ができます。</p>
+  <p class="page-desc">対談権・アーカイブの絞り込みや、クリエイター別の表示ができます。クリエイター名をクリックすると本人のページに移動します。</p>
 
   <div class="filter-bar">
-    <div class="chips">
-      <button class="chip active">すべて</button>
-      <button class="chip">🎤 対談権</button>
-      <button class="chip">📚 アーカイブ</button>
+    <div class="chips" id="type-chips">
+      <button class="chip active" data-type="all">すべて</button>
+      <button class="chip" data-type="talk">🎤 対談権</button>
+      <button class="chip" data-type="arch">📚 アーカイブ</button>
     </div>
-    <select class="in" style="width:auto">
-      <option>クリエイター：すべて</option>
-      <option>堀川 蓮</option><option>早乙女 香織</option><option>三嶋 剛</option>
-      <option>白石 悠</option><option>神谷 真琴</option><option>大森 一樹</option>
+    <select class="in" style="width:auto" id="creator-filter">
+      <option value="all">クリエイター：すべて</option>
+      <option value="horikawa">堀川 蓮</option>
+      <option value="saotome">早乙女 香織</option>
+      <option value="mishima">三嶋 剛</option>
+      <option value="shiraishi">白石 悠</option>
+      <option value="kamiya">神谷 真琴</option>
+      <option value="omori">大森 一樹</option>
     </select>
     <select class="in" style="width:auto">
       <option>並び順：おすすめ</option><option>新着順</option><option>価格が安い順</option><option>価格が高い順</option>
@@ -45,71 +49,7 @@
     <input class="in" style="flex:1;min-width:160px" type="search" placeholder="🔍 キーワードで検索（例：マーケティング）">
   </div>
 
-  <div class="grid3">
-    <a class="p-card" href="product-talk.html">
-      <div class="p-thumb th-talk"><span class="avatar lg av1">堀</span></div>
-      <div class="p-body"><span class="type-badge talk">対談権</span>
-        <h3>事業相談・壁打ち 30分オンライン対談</h3>
-        <p class="p-creator"><span class="avatar av1" style="width:22px;height:22px;font-size:10px">堀</span>堀川 蓮</p>
-        <p class="p-price">¥33,000 <span>/ 30分・オンライン</span></p></div>
-    </a>
-    <a class="p-card" href="product-talk.html">
-      <div class="p-thumb th-talk"><span class="avatar lg av2">早</span></div>
-      <div class="p-body"><span class="type-badge talk">対談権</span>
-        <h3>マーケ戦略まるごと相談 45分対談</h3>
-        <p class="p-creator"><span class="avatar av2" style="width:22px;height:22px;font-size:10px">早</span>早乙女 香織</p>
-        <p class="p-price">¥27,500 <span>/ 45分・オンライン／対面</span></p></div>
-    </a>
-    <a class="p-card" href="product-talk.html">
-      <div class="p-thumb th-talk"><span class="avatar lg av3">三</span></div>
-      <div class="p-body"><span class="type-badge talk">対談権</span>
-        <h3>資産形成なんでも相談 30分オンライン対談</h3>
-        <p class="p-creator"><span class="avatar av3" style="width:22px;height:22px;font-size:10px">三</span>三嶋 剛</p>
-        <p class="p-price">¥22,000 <span>/ 30分・オンライン</span></p></div>
-    </a>
-    <a class="p-card" href="product-archive.html">
-      <div class="p-thumb th-arch"><span class="avatar lg av1">堀</span></div>
-      <div class="p-body"><span class="type-badge arch">アーカイブ</span>
-        <h3>起業の現場から 2026年6月号（全8通）</h3>
-        <p class="p-creator"><span class="avatar av1" style="width:22px;height:22px;font-size:10px">堀</span>堀川 蓮</p>
-        <p class="p-price">¥1,650</p></div>
-    </a>
-    <a class="p-card" href="product-archive.html">
-      <div class="p-thumb th-arch"><span class="avatar lg av2">早</span></div>
-      <div class="p-body"><span class="type-badge arch">アーカイブ</span>
-        <h3>売れる仕組み研究室 2026年上半期セット（全24通）</h3>
-        <p class="p-creator"><span class="avatar av2" style="width:22px;height:22px;font-size:10px">早</span>早乙女 香織</p>
-        <p class="p-price">¥5,500</p></div>
-    </a>
-    <a class="p-card" href="product-archive.html">
-      <div class="p-thumb th-arch"><span class="avatar lg av3">三</span></div>
-      <div class="p-body"><span class="type-badge arch">アーカイブ</span>
-        <h3>マーケットの読み方 2026年6月号（全4通）</h3>
-        <p class="p-creator"><span class="avatar av3" style="width:22px;height:22px;font-size:10px">三</span>三嶋 剛</p>
-        <p class="p-price">¥1,100</p></div>
-    </a>
-    <a class="p-card" href="product-archive.html">
-      <div class="p-thumb th-arch"><span class="avatar lg av4">白</span></div>
-      <div class="p-body"><span class="type-badge arch">アーカイブ</span>
-        <h3>資金調達の裏側 シリーズA特集（全6通）</h3>
-        <p class="p-creator"><span class="avatar av4" style="width:22px;height:22px;font-size:10px">白</span>白石 悠</p>
-        <p class="p-price">¥2,200</p></div>
-    </a>
-    <a class="p-card" href="product-archive.html">
-      <div class="p-thumb th-arch"><span class="avatar lg av5">神</span></div>
-      <div class="p-body"><span class="type-badge arch">アーカイブ</span>
-        <h3>強いチームのつくり方 2026年5月号（全4通）</h3>
-        <p class="p-creator"><span class="avatar av5" style="width:22px;height:22px;font-size:10px">神</span>神谷 真琴</p>
-        <p class="p-price">¥1,320</p></div>
-    </a>
-    <a class="p-card" href="product-archive.html">
-      <div class="p-thumb th-arch"><span class="avatar lg av6">大</span></div>
-      <div class="p-body"><span class="type-badge arch">アーカイブ</span>
-        <h3>AI経営メモ 2026年6月号（全8通）</h3>
-        <p class="p-creator"><span class="avatar av6" style="width:22px;height:22px;font-size:10px">大</span>大森 一樹</p>
-        <p class="p-price">¥1,650</p></div>
-    </a>
-  </div>
+  <div class="grid3" id="product-grid"></div>
 
   <div style="display:flex;justify-content:center;gap:8px;margin-top:34px">
     <a class="btn btn-primary btn-sm" href="#">1</a>
@@ -132,6 +72,40 @@
     <p class="copyright">© 2026 まぐまぐストア（デモサイト）— 掲載の人物・商品・金額はすべて架空です。</p>
   </div>
 </footer>
+<script src="assets/data.js"></script>
+<script>
+(function () {
+  var order = ["t-horikawa30", "t-saotome45", "t-mishima30", "t-horikawa60", "t-kamiya30",
+    "a-saotome-h1", "a-horikawa-06", "a-mishima-06", "a-shiraishi-a", "a-kamiya-05", "a-omori-06"];
+  var grid = document.getElementById("product-grid");
+  var type = "all", creator = "all";
+  function draw() {
+    grid.innerHTML = order.filter(function (id) {
+      var p = MG.products[id];
+      return (type === "all" || p.type === type) && (creator === "all" || p.c === creator);
+    }).map(function (id) { return MG.card(id); }).join("");
+    // カード再生成後に人名クリックを配線し直す
+    grid.querySelectorAll(".c-jump").forEach(function (el) {
+      el.addEventListener("click", function (e) {
+        e.preventDefault(); e.stopPropagation();
+        location.href = "creator.html?c=" + el.dataset.c;
+      });
+    });
+  }
+  document.querySelectorAll("#type-chips .chip").forEach(function (ch) {
+    ch.addEventListener("click", function () {
+      document.querySelectorAll("#type-chips .chip").forEach(function (x) { x.classList.toggle("active", x === ch); });
+      type = ch.dataset.type;
+      draw();
+    });
+  });
+  document.getElementById("creator-filter").addEventListener("change", function () {
+    creator = this.value;
+    draw();
+  });
+  draw();
+})();
+</script>
 <script src="assets/common.js"></script>
 </body>
 </html>
